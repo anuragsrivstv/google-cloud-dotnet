@@ -14,18 +14,17 @@
 
 using Google.Cloud.Storage.V1.Tests.Conformance;
 
-namespace Google.Cloud.Storage.V1.RetryConformanceTests
+namespace Google.Cloud.Storage.V1.RetryConformanceTests;
+
+internal readonly struct StorageResource
 {
-    internal readonly struct StorageResource
+    internal Resource Resource { get; }
+
+    internal string Value { get; }
+
+    public StorageResource(Resource resource, string value)
     {
-        internal Resource Resource { get; }
-
-        internal string Value { get; }
-
-        public StorageResource(Resource resource, string value)
-        {
-            Resource = resource;
-            Value = value;
-        }
+        Resource = resource;
+        Value = value;
     }
 }

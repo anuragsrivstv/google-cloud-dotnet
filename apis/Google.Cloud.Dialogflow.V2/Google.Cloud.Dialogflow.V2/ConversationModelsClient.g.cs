@@ -570,7 +570,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// The project to create conversation model for. Format:
-        /// `projects/{Project ID}`
+        /// `projects/&lt;Project ID&gt;`
         /// </param>
         /// <param name="conversationModel">
         /// Required. The conversation model to create.
@@ -596,7 +596,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// The project to create conversation model for. Format:
-        /// `projects/{Project ID}`
+        /// `projects/&lt;Project ID&gt;`
         /// </param>
         /// <param name="conversationModel">
         /// Required. The conversation model to create.
@@ -622,7 +622,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// The project to create conversation model for. Format:
-        /// `projects/{Project ID}`
+        /// `projects/&lt;Project ID&gt;`
         /// </param>
         /// <param name="conversationModel">
         /// Required. The conversation model to create.
@@ -664,7 +664,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model to retrieve. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -679,7 +679,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model to retrieve. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -694,7 +694,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model to retrieve. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -724,7 +724,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all conversation models for.
-        /// Format: `projects/{Project ID}`
+        /// Format: `projects/&lt;Project ID&gt;`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -749,7 +749,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list all conversation models for.
-        /// Format: `projects/{Project ID}`
+        /// Format: `projects/&lt;Project ID&gt;`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -860,7 +860,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model to delete. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -883,7 +883,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model to delete. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -906,7 +906,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model to delete. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1119,8 +1119,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model evaluation resource name. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model
-        /// ID&amp;gt;/evaluations/&amp;lt;Evaluation ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model
+        /// ID&gt;/evaluations/&lt;Evaluation ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1135,8 +1135,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model evaluation resource name. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model
-        /// ID&amp;gt;/evaluations/&amp;lt;Evaluation ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model
+        /// ID&gt;/evaluations/&lt;Evaluation ID&gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1151,8 +1151,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The conversation model evaluation resource name. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model
-        /// ID&amp;gt;/evaluations/&amp;lt;Evaluation ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model
+        /// ID&gt;/evaluations/&lt;Evaluation ID&gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1182,7 +1182,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1207,7 +1207,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
-        /// `projects/{Project ID}/conversationModels/{Conversation Model ID}`
+        /// `projects/&lt;Project ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1286,8 +1286,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
-        /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1306,8 +1306,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
-        /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1326,8 +1326,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
-        /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1342,8 +1342,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
-        /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1362,8 +1362,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
-        /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.
@@ -1382,8 +1382,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The conversation model resource name. Format:
-        /// `projects/{Project ID}/locations/{Location
-        /// ID&amp;gt;/conversationModels/&amp;lt;Conversation Model ID&amp;gt;`
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversationModels/&lt;Conversation Model ID&gt;`
         /// </param>
         /// <param name="conversationModelEvaluation">
         /// Required. The conversation model evaluation to be created.

@@ -1,5 +1,24 @@
 # Version history
 
+## Version 2.3.0, released 2022-08-26
+
+### New features
+
+- Add read_mask to ListPipelineJobsRequest in aiplatform v1 pipeline_service ([commit 099522b](https://github.com/googleapis/google-cloud-dotnet/commit/099522b4f29dc941b522f23d9c32aadf6b4b7d63))
+- Add input_artifacts to PipelineJob.runtime_config in aiplatform v1 pipeline_job ([commit 099522b](https://github.com/googleapis/google-cloud-dotnet/commit/099522b4f29dc941b522f23d9c32aadf6b4b7d63))
+- Add UpsertDatapoints and RemoveDatapoints rpcs to IndexService in aiplatform v1 index_service.proto ([commit 592d099](https://github.com/googleapis/google-cloud-dotnet/commit/592d0997fa583f3741b60490fdd4cb131e5ac100))
+
+## Version 2.2.0, released 2022-08-04
+
+### New features
+
+- Making network arg optional in aiplatform v1 custom_job.proto ([commit fbae4d8](https://github.com/googleapis/google-cloud-dotnet/commit/fbae4d8e9d39732ee2c570126f055171256121ba))
+- Added SHARED_RESOURCES enum to aiplatform v1 model.proto ([commit fbae4d8](https://github.com/googleapis/google-cloud-dotnet/commit/fbae4d8e9d39732ee2c570126f055171256121ba))
+
+### Documentation improvements
+
+- Doc edits to aiplatform v1 dataset_service.proto, job_service.proto, model_service.proto, pipeline_service.proto, saved_query.proto, study.proto, types.proto ([commit fbae4d8](https://github.com/googleapis/google-cloud-dotnet/commit/fbae4d8e9d39732ee2c570126f055171256121ba))
+
 ## Version 2.1.0, released 2022-07-11
 
 ### New features

@@ -31,7 +31,7 @@ internal sealed class Configuration
     internal int DownloadChunkSizeInBytes { get; }
     internal string BucketStorageClass { get; }
     internal string BucketLocation { get; }
-    internal bool ObjVersioningEnabled { get; }
+    internal bool ObjectVersioningEnabled { get; }
     internal string BucketName { get; } = IdGenerator.FromDateTime(prefix: "benchmark-");
     internal string ObjectName => "obj_random_data";
 
@@ -42,8 +42,8 @@ internal sealed class Configuration
         int uploadChunkSizeInBytes,
         int downloadChunkSizeInBytes,
         string bucketLocation,
-        string storageClass,
-        bool versioningEnabled)
+        string bucketStorageClass,
+        bool objectVersioningEnabled)
     {
         DataSizeInBytes = dataSizeInBytes;
         LocalFile = Path.GetTempFileName();
@@ -52,8 +52,8 @@ internal sealed class Configuration
         DownloadChunkSizeInBytes = downloadChunkSizeInBytes;
         NumOfSamples = numOfSamples;
         BucketLocation = bucketLocation;
-        BucketStorageClass = storageClass;
-        ObjVersioningEnabled = versioningEnabled;
+        BucketStorageClass = bucketStorageClass;
+        ObjectVersioningEnabled = objectVersioningEnabled;
     }
 
     internal static Configuration FromCommandLineArguments(string[] args)

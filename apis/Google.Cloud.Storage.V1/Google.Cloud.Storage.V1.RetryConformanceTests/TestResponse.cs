@@ -16,19 +16,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
-namespace Google.Cloud.Storage.V1.RetryConformanceTests
+namespace Google.Cloud.Storage.V1.RetryConformanceTests;
+
+internal class TestResponse
 {
-    internal class TestResponse
-    {
-        [JsonProperty("id")]
-        public string Id { get; set; }
+    [JsonProperty("id")]
+    public string Id { get; set; }
 
-        // TODO: Make this property clean and better. This is a quick hack to get the Instructions.
+    [JsonExtensionData]
+    public IDictionary<string, JToken> Instructions { get; set; } = new Dictionary<string, JToken>();
 
-        [JsonExtensionData]
-        public IDictionary<string, JToken> Instructions { get; set; } = new Dictionary<string, JToken>();
-
-        [JsonProperty("completed")]
-        public bool Completed { get; set; }
-    }
+    [JsonProperty("completed")]
+    public bool Completed { get; set; }
 }
