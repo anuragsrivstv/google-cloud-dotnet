@@ -570,7 +570,6 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             DeleteApiRequest request = new DeleteApiRequest
             {
                 ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
-                Force = false,
             };
             // Make the request
             registryClient.DeleteApi(request);
@@ -588,7 +587,6 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             DeleteApiRequest request = new DeleteApiRequest
             {
                 ApiName = ApiName.FromProjectLocationApi("[PROJECT]", "[LOCATION]", "[API]"),
-                Force = false,
             };
             // Make the request
             await registryClient.DeleteApiAsync(request);
@@ -1189,7 +1187,6 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             DeleteApiVersionRequest request = new DeleteApiVersionRequest
             {
                 ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
-                Force = false,
             };
             // Make the request
             registryClient.DeleteApiVersion(request);
@@ -1207,7 +1204,6 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             DeleteApiVersionRequest request = new DeleteApiVersionRequest
             {
                 ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
-                Force = false,
             };
             // Make the request
             await registryClient.DeleteApiVersionAsync(request);

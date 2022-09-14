@@ -16,15 +16,16 @@ using Google.Cloud.Storage.V1.Tests.Conformance;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Google.Cloud.Storage.V1.RetryConformanceTests;
-
-internal class StorageResources : List<StorageResource>
+namespace Google.Cloud.Storage.V1.RetryConformanceTests
 {
-    internal string BucketName => this.FirstOrDefault(j => j.Resource == Resource.Bucket).Value;
+    internal class StorageResources : List<StorageResource>
+    {
+        internal string BucketName => this.FirstOrDefault(j => j.Resource == Resource.Bucket).Value;
 
-    internal string ObjectName => this.FirstOrDefault(j => j.Resource == Resource.Object).Value;
+        internal string ObjectName => this.FirstOrDefault(j => j.Resource == Resource.Object).Value;
 
-    internal string HmacKey => this.FirstOrDefault(j => j.Resource == Resource.HmacKey).Value;
+        internal string HmacKey => this.FirstOrDefault(j => j.Resource == Resource.HmacKey).Value;
 
-    internal string Notification => this.FirstOrDefault(j => j.Resource == Resource.Notification).Value;
+        internal string Notification => this.FirstOrDefault(j => j.Resource == Resource.Notification).Value;
+    }
 }

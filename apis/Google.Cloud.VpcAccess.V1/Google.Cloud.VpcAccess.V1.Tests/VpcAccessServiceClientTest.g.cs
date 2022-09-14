@@ -16,7 +16,6 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -34,7 +33,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
         {
             moq::Mock<VpcAccessService.VpcAccessServiceClient> mockGrpcClient = new moq::Mock<VpcAccessService.VpcAccessServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectorRequest request = new GetConnectorRequest
             {
                 ConnectorName = ConnectorName.FromProjectLocationConnector("[PROJECT]", "[LOCATION]", "[CONNECTOR]"),
@@ -52,9 +50,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                     "connected_projects7e2fb014",
                 },
                 Subnet = new Connector.Types.Subnet(),
-                MachineType = "machine_type68ce40fa",
-                MinInstances = 445814344,
-                MaxInstances = -1449803711,
             };
             mockGrpcClient.Setup(x => x.GetConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -68,7 +63,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
         {
             moq::Mock<VpcAccessService.VpcAccessServiceClient> mockGrpcClient = new moq::Mock<VpcAccessService.VpcAccessServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectorRequest request = new GetConnectorRequest
             {
                 ConnectorName = ConnectorName.FromProjectLocationConnector("[PROJECT]", "[LOCATION]", "[CONNECTOR]"),
@@ -86,9 +80,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                     "connected_projects7e2fb014",
                 },
                 Subnet = new Connector.Types.Subnet(),
-                MachineType = "machine_type68ce40fa",
-                MinInstances = 445814344,
-                MaxInstances = -1449803711,
             };
             mockGrpcClient.Setup(x => x.GetConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -104,7 +95,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
         {
             moq::Mock<VpcAccessService.VpcAccessServiceClient> mockGrpcClient = new moq::Mock<VpcAccessService.VpcAccessServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectorRequest request = new GetConnectorRequest
             {
                 ConnectorName = ConnectorName.FromProjectLocationConnector("[PROJECT]", "[LOCATION]", "[CONNECTOR]"),
@@ -122,9 +112,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                     "connected_projects7e2fb014",
                 },
                 Subnet = new Connector.Types.Subnet(),
-                MachineType = "machine_type68ce40fa",
-                MinInstances = 445814344,
-                MaxInstances = -1449803711,
             };
             mockGrpcClient.Setup(x => x.GetConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -138,7 +125,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
         {
             moq::Mock<VpcAccessService.VpcAccessServiceClient> mockGrpcClient = new moq::Mock<VpcAccessService.VpcAccessServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectorRequest request = new GetConnectorRequest
             {
                 ConnectorName = ConnectorName.FromProjectLocationConnector("[PROJECT]", "[LOCATION]", "[CONNECTOR]"),
@@ -156,9 +142,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                     "connected_projects7e2fb014",
                 },
                 Subnet = new Connector.Types.Subnet(),
-                MachineType = "machine_type68ce40fa",
-                MinInstances = 445814344,
-                MaxInstances = -1449803711,
             };
             mockGrpcClient.Setup(x => x.GetConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -174,7 +157,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
         {
             moq::Mock<VpcAccessService.VpcAccessServiceClient> mockGrpcClient = new moq::Mock<VpcAccessService.VpcAccessServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectorRequest request = new GetConnectorRequest
             {
                 ConnectorName = ConnectorName.FromProjectLocationConnector("[PROJECT]", "[LOCATION]", "[CONNECTOR]"),
@@ -192,9 +174,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                     "connected_projects7e2fb014",
                 },
                 Subnet = new Connector.Types.Subnet(),
-                MachineType = "machine_type68ce40fa",
-                MinInstances = 445814344,
-                MaxInstances = -1449803711,
             };
             mockGrpcClient.Setup(x => x.GetConnector(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -208,7 +187,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
         {
             moq::Mock<VpcAccessService.VpcAccessServiceClient> mockGrpcClient = new moq::Mock<VpcAccessService.VpcAccessServiceClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetConnectorRequest request = new GetConnectorRequest
             {
                 ConnectorName = ConnectorName.FromProjectLocationConnector("[PROJECT]", "[LOCATION]", "[CONNECTOR]"),
@@ -226,9 +204,6 @@ namespace Google.Cloud.VpcAccess.V1.Tests
                     "connected_projects7e2fb014",
                 },
                 Subnet = new Connector.Types.Subnet(),
-                MachineType = "machine_type68ce40fa",
-                MinInstances = 445814344,
-                MaxInstances = -1449803711,
             };
             mockGrpcClient.Setup(x => x.GetConnectorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Connector>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VpcAccessServiceClient client = new VpcAccessServiceClientImpl(mockGrpcClient.Object, null, null);

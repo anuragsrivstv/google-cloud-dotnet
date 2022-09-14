@@ -17,7 +17,6 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
-using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -35,7 +34,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void InspectContentRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             InspectContentRequest request = new InspectContentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -59,7 +57,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task InspectContentRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             InspectContentRequest request = new InspectContentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -85,7 +82,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void RedactImageRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             RedactImageRequest request = new RedactImageRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -115,7 +111,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task RedactImageRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             RedactImageRequest request = new RedactImageRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -147,7 +142,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeidentifyContentRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeidentifyContentRequest request = new DeidentifyContentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -174,7 +168,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeidentifyContentRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeidentifyContentRequest request = new DeidentifyContentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -203,7 +196,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void ReidentifyContentRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ReidentifyContentRequest request = new ReidentifyContentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -230,7 +222,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task ReidentifyContentRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ReidentifyContentRequest request = new ReidentifyContentRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -259,7 +250,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void ListInfoTypesRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListInfoTypesRequest request = new ListInfoTypesRequest
             {
                 LanguageCode = "language_code2f6c7160",
@@ -285,7 +275,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task ListInfoTypesRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListInfoTypesRequest request = new ListInfoTypesRequest
             {
                 LanguageCode = "language_code2f6c7160",
@@ -313,7 +302,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void ListInfoTypes()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListInfoTypesRequest request = new ListInfoTypesRequest
             {
                 Parent = "parent7858e4d0",
@@ -336,7 +324,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task ListInfoTypesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ListInfoTypesRequest request = new ListInfoTypesRequest
             {
                 Parent = "parent7858e4d0",
@@ -361,7 +348,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateInspectTemplateRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -389,7 +375,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateInspectTemplateRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -419,7 +404,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateInspectTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -445,7 +429,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateInspectTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -473,7 +456,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateInspectTemplateResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -499,7 +481,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateInspectTemplateResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -527,7 +508,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateInspectTemplateResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -553,7 +533,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateInspectTemplateResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -581,7 +560,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateInspectTemplateResourceNames3()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -607,7 +585,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateInspectTemplateResourceNames3Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -635,7 +612,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateInspectTemplateResourceNames4()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -661,7 +637,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateInspectTemplateResourceNames4Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -689,7 +664,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateInspectTemplateRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateInspectTemplateRequest request = new UpdateInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -716,7 +690,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateInspectTemplateRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateInspectTemplateRequest request = new UpdateInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -745,7 +718,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateInspectTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateInspectTemplateRequest request = new UpdateInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -772,7 +744,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateInspectTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateInspectTemplateRequest request = new UpdateInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -801,7 +772,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateInspectTemplateResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateInspectTemplateRequest request = new UpdateInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -828,7 +798,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateInspectTemplateResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateInspectTemplateRequest request = new UpdateInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -857,7 +826,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetInspectTemplateRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetInspectTemplateRequest request = new GetInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -882,7 +850,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetInspectTemplateRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetInspectTemplateRequest request = new GetInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -909,7 +876,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetInspectTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetInspectTemplateRequest request = new GetInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -934,7 +900,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetInspectTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetInspectTemplateRequest request = new GetInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -961,7 +926,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetInspectTemplateResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetInspectTemplateRequest request = new GetInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -986,7 +950,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetInspectTemplateResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetInspectTemplateRequest request = new GetInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -1013,7 +976,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteInspectTemplateRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteInspectTemplateRequest request = new DeleteInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -1029,7 +991,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteInspectTemplateRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteInspectTemplateRequest request = new DeleteInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -1046,7 +1007,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteInspectTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteInspectTemplateRequest request = new DeleteInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -1062,7 +1022,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteInspectTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteInspectTemplateRequest request = new DeleteInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -1079,7 +1038,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteInspectTemplateResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteInspectTemplateRequest request = new DeleteInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -1095,7 +1053,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteInspectTemplateResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteInspectTemplateRequest request = new DeleteInspectTemplateRequest
             {
                 InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
@@ -1112,7 +1069,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDeidentifyTemplateRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1140,7 +1096,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDeidentifyTemplateRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1170,7 +1125,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDeidentifyTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1196,7 +1150,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDeidentifyTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1224,7 +1177,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDeidentifyTemplateResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1250,7 +1202,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDeidentifyTemplateResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1278,7 +1229,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDeidentifyTemplateResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1304,7 +1254,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDeidentifyTemplateResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1332,7 +1281,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDeidentifyTemplateResourceNames3()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1358,7 +1306,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDeidentifyTemplateResourceNames3Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1386,7 +1333,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDeidentifyTemplateResourceNames4()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1412,7 +1358,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDeidentifyTemplateResourceNames4Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -1440,7 +1385,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateDeidentifyTemplateRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDeidentifyTemplateRequest request = new UpdateDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1467,7 +1411,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateDeidentifyTemplateRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDeidentifyTemplateRequest request = new UpdateDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1496,7 +1439,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateDeidentifyTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDeidentifyTemplateRequest request = new UpdateDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1523,7 +1465,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateDeidentifyTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDeidentifyTemplateRequest request = new UpdateDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1552,7 +1493,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateDeidentifyTemplateResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDeidentifyTemplateRequest request = new UpdateDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1579,7 +1519,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateDeidentifyTemplateResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDeidentifyTemplateRequest request = new UpdateDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1608,7 +1547,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetDeidentifyTemplateRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeidentifyTemplateRequest request = new GetDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1633,7 +1571,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetDeidentifyTemplateRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeidentifyTemplateRequest request = new GetDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1660,7 +1597,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetDeidentifyTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeidentifyTemplateRequest request = new GetDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1685,7 +1621,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetDeidentifyTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeidentifyTemplateRequest request = new GetDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1712,7 +1647,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetDeidentifyTemplateResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeidentifyTemplateRequest request = new GetDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1737,7 +1671,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetDeidentifyTemplateResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDeidentifyTemplateRequest request = new GetDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1764,7 +1697,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteDeidentifyTemplateRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDeidentifyTemplateRequest request = new DeleteDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1780,7 +1712,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteDeidentifyTemplateRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDeidentifyTemplateRequest request = new DeleteDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1797,7 +1728,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteDeidentifyTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDeidentifyTemplateRequest request = new DeleteDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1813,7 +1743,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteDeidentifyTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDeidentifyTemplateRequest request = new DeleteDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1830,7 +1759,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteDeidentifyTemplateResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDeidentifyTemplateRequest request = new DeleteDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1846,7 +1774,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteDeidentifyTemplateResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDeidentifyTemplateRequest request = new DeleteDeidentifyTemplateRequest
             {
                 DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
@@ -1863,7 +1790,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateJobTriggerRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1898,7 +1824,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateJobTriggerRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1935,7 +1860,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateJobTrigger()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -1968,7 +1892,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateJobTriggerAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2003,7 +1926,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateJobTriggerResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2036,7 +1958,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateJobTriggerResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2071,7 +1992,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateJobTriggerResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2104,7 +2024,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateJobTriggerResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2139,7 +2058,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateJobTriggerRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateJobTriggerRequest request = new UpdateJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2173,7 +2091,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateJobTriggerRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateJobTriggerRequest request = new UpdateJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2209,7 +2126,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateJobTrigger()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateJobTriggerRequest request = new UpdateJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2243,7 +2159,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateJobTriggerAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateJobTriggerRequest request = new UpdateJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2279,7 +2194,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateJobTriggerResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateJobTriggerRequest request = new UpdateJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2313,7 +2227,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateJobTriggerResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateJobTriggerRequest request = new UpdateJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2349,7 +2262,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void HybridInspectJobTriggerRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectJobTriggerRequest request = new HybridInspectJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2367,7 +2279,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task HybridInspectJobTriggerRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectJobTriggerRequest request = new HybridInspectJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2387,7 +2298,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void HybridInspectJobTrigger()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectJobTriggerRequest request = new HybridInspectJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2404,7 +2314,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task HybridInspectJobTriggerAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectJobTriggerRequest request = new HybridInspectJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2423,7 +2332,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void HybridInspectJobTriggerResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectJobTriggerRequest request = new HybridInspectJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2440,7 +2348,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task HybridInspectJobTriggerResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectJobTriggerRequest request = new HybridInspectJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2459,7 +2366,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetJobTriggerRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetJobTriggerRequest request = new GetJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2491,7 +2397,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetJobTriggerRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetJobTriggerRequest request = new GetJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2525,7 +2430,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetJobTrigger()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetJobTriggerRequest request = new GetJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2557,7 +2461,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetJobTriggerAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetJobTriggerRequest request = new GetJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2591,7 +2494,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetJobTriggerResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetJobTriggerRequest request = new GetJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2623,7 +2525,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetJobTriggerResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetJobTriggerRequest request = new GetJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2657,7 +2558,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteJobTriggerRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteJobTriggerRequest request = new DeleteJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2673,7 +2573,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteJobTriggerRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteJobTriggerRequest request = new DeleteJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2690,7 +2589,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteJobTrigger()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteJobTriggerRequest request = new DeleteJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2706,7 +2604,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteJobTriggerAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteJobTriggerRequest request = new DeleteJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2723,7 +2620,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteJobTriggerResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteJobTriggerRequest request = new DeleteJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2739,7 +2635,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteJobTriggerResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteJobTriggerRequest request = new DeleteJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2756,7 +2651,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void ActivateJobTriggerRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ActivateJobTriggerRequest request = new ActivateJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2785,7 +2679,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task ActivateJobTriggerRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             ActivateJobTriggerRequest request = new ActivateJobTriggerRequest
             {
                 JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
@@ -2816,7 +2709,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDlpJobRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2849,7 +2741,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDlpJobRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2884,7 +2775,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDlpJob1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2914,7 +2804,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDlpJob1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2946,7 +2835,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDlpJob1ResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -2976,7 +2864,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDlpJob1ResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3008,7 +2895,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDlpJob1ResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3038,7 +2924,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDlpJob1ResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3070,7 +2955,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDlpJob2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3100,7 +2984,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDlpJob2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3132,7 +3015,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDlpJob2ResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3162,7 +3044,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDlpJob2ResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3194,7 +3075,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateDlpJob2ResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3224,7 +3104,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateDlpJob2ResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -3256,7 +3135,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetDlpJobRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDlpJobRequest request = new GetDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3285,7 +3163,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetDlpJobRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDlpJobRequest request = new GetDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3316,7 +3193,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetDlpJob()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDlpJobRequest request = new GetDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3345,7 +3221,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetDlpJobAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDlpJobRequest request = new GetDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3376,7 +3251,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetDlpJobResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDlpJobRequest request = new GetDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3405,7 +3279,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetDlpJobResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDlpJobRequest request = new GetDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3436,7 +3309,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteDlpJobRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDlpJobRequest request = new DeleteDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3452,7 +3324,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteDlpJobRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDlpJobRequest request = new DeleteDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3469,7 +3340,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteDlpJob()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDlpJobRequest request = new DeleteDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3485,7 +3355,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteDlpJobAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDlpJobRequest request = new DeleteDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3502,7 +3371,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteDlpJobResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDlpJobRequest request = new DeleteDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3518,7 +3386,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteDlpJobResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDlpJobRequest request = new DeleteDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3535,7 +3402,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CancelDlpJobRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CancelDlpJobRequest request = new CancelDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3551,7 +3417,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CancelDlpJobRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CancelDlpJobRequest request = new CancelDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -3568,7 +3433,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateStoredInfoTypeRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3596,7 +3460,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateStoredInfoTypeRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3626,7 +3489,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateStoredInfoType()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3652,7 +3514,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateStoredInfoTypeAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3680,7 +3541,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateStoredInfoTypeResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3706,7 +3566,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateStoredInfoTypeResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3734,7 +3593,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateStoredInfoTypeResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3760,7 +3618,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateStoredInfoTypeResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3788,7 +3645,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateStoredInfoTypeResourceNames3()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3814,7 +3670,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateStoredInfoTypeResourceNames3Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3842,7 +3697,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void CreateStoredInfoTypeResourceNames4()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3868,7 +3722,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task CreateStoredInfoTypeResourceNames4Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
             {
                 ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
@@ -3896,7 +3749,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateStoredInfoTypeRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -3923,7 +3775,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateStoredInfoTypeRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -3952,7 +3803,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateStoredInfoType()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -3979,7 +3829,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateStoredInfoTypeAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4008,7 +3857,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void UpdateStoredInfoTypeResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4035,7 +3883,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task UpdateStoredInfoTypeResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateStoredInfoTypeRequest request = new UpdateStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4064,7 +3911,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetStoredInfoTypeRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4089,7 +3935,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetStoredInfoTypeRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4116,7 +3961,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetStoredInfoType()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4141,7 +3985,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetStoredInfoTypeAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4168,7 +4011,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void GetStoredInfoTypeResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4193,7 +4035,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task GetStoredInfoTypeResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetStoredInfoTypeRequest request = new GetStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4220,7 +4061,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteStoredInfoTypeRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4236,7 +4076,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteStoredInfoTypeRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4253,7 +4092,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteStoredInfoType()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4269,7 +4107,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteStoredInfoTypeAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4286,7 +4123,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void DeleteStoredInfoTypeResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4302,7 +4138,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task DeleteStoredInfoTypeResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteStoredInfoTypeRequest request = new DeleteStoredInfoTypeRequest
             {
                 StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
@@ -4319,7 +4154,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void HybridInspectDlpJobRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectDlpJobRequest request = new HybridInspectDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -4337,7 +4171,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task HybridInspectDlpJobRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectDlpJobRequest request = new HybridInspectDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -4357,7 +4190,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void HybridInspectDlpJob()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectDlpJobRequest request = new HybridInspectDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -4374,7 +4206,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task HybridInspectDlpJobAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectDlpJobRequest request = new HybridInspectDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -4393,7 +4224,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void HybridInspectDlpJobResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectDlpJobRequest request = new HybridInspectDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -4410,7 +4240,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task HybridInspectDlpJobResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             HybridInspectDlpJobRequest request = new HybridInspectDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -4429,7 +4258,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public void FinishDlpJobRequestObject()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             FinishDlpJobRequest request = new FinishDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
@@ -4445,7 +4273,6 @@ namespace Google.Cloud.Dlp.V2.Tests
         public async stt::Task FinishDlpJobRequestObjectAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             FinishDlpJobRequest request = new FinishDlpJobRequest
             {
                 DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),

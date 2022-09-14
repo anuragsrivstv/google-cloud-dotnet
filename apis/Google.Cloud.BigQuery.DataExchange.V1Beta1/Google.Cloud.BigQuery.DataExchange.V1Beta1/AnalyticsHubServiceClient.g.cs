@@ -19,7 +19,6 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
-using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -64,7 +63,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
-            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -392,11 +390,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
-        /// <summary>
-        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
-        /// </summary>
-        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
-
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AnalyticsHubServiceSettings"/> object.</returns>
         public AnalyticsHubServiceSettings Clone() => new AnalyticsHubServiceSettings(this);
@@ -456,12 +449,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
 
     /// <summary>AnalyticsHubService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// The `AnalyticsHubService` API facilitates data sharing within and across
-    /// organizations. It allows data providers to publish listings that reference
-    /// shared datasets. With Analytics Hub, users can discover and search for
-    /// listings that they have access to. Subscribers can view and subscribe to
-    /// listings. When you subscribe to a listing, Analytics Hub creates a linked
-    /// dataset in your project.
+    /// The AnalyticsHubService API facilitates data sharing within and across
+    /// organizations. It allows data providers to publish Listings --- a
+    /// discoverable and searchable SKU representing a dataset. Data consumers can
+    /// subscribe to Listings. Upon subscription, AnalyticsHub provisions a "Linked
+    /// Datasets" surfacing the data in the consumer's project.
     /// </remarks>
     public abstract partial class AnalyticsHubServiceClient
     {
@@ -548,11 +540,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// <summary>The underlying gRPC AnalyticsHubService client</summary>
         public virtual AnalyticsHubService.AnalyticsHubServiceClient GrpcClient => throw new sys::NotImplementedException();
 
-        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
-        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
-
         /// <summary>
-        /// Lists all data exchanges in a given project and location.
+        /// Lists DataExchanges in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -561,7 +550,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all data exchanges in a given project and location.
+        /// Lists DataExchanges in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -570,10 +559,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all data exchanges in a given project and location.
+        /// Lists DataExchanges in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchanges.
+        /// Required. The parent resource path of the DataExchanges.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="pageToken">
@@ -595,10 +584,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Lists all data exchanges in a given project and location.
+        /// Lists DataExchanges in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchanges.
+        /// Required. The parent resource path of the DataExchanges.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="pageToken">
@@ -620,10 +609,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Lists all data exchanges in a given project and location.
+        /// Lists DataExchanges in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchanges.
+        /// Required. The parent resource path of the DataExchanges.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="pageToken">
@@ -645,10 +634,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Lists all data exchanges in a given project and location.
+        /// Lists DataExchanges in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchanges.
+        /// Required. The parent resource path of the DataExchanges.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="pageToken">
@@ -670,8 +659,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Lists all data exchanges from projects in a given organization and
-        /// location.
+        /// Lists DataExchanges from projects in a given organization and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -680,8 +668,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all data exchanges from projects in a given organization and
-        /// location.
+        /// Lists DataExchanges from projects in a given organization and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -690,8 +677,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all data exchanges from projects in a given organization and
-        /// location.
+        /// Lists DataExchanges from projects in a given organization and location.
         /// </summary>
         /// <param name="organization">
         /// Required. The organization resource path of the projects containing DataExchanges.
@@ -716,8 +702,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Lists all data exchanges from projects in a given organization and
-        /// location.
+        /// Lists DataExchanges from projects in a given organization and location.
         /// </summary>
         /// <param name="organization">
         /// Required. The organization resource path of the projects containing DataExchanges.
@@ -742,7 +727,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -751,7 +736,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -760,7 +745,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -769,10 +754,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GetDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the data exchange.
+        /// Required. The resource name of the DataExchange.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -784,10 +769,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the data exchange.
+        /// Required. The resource name of the DataExchange.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -799,10 +784,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the data exchange.
+        /// Required. The resource name of the DataExchange.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -811,10 +796,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GetDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the data exchange.
+        /// Required. The resource name of the DataExchange.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -826,10 +811,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the data exchange.
+        /// Required. The resource name of the DataExchange.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -841,10 +826,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the data exchange.
+        /// Required. The resource name of the DataExchange.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -853,7 +838,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GetDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -862,7 +847,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -871,7 +856,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -880,14 +865,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             CreateDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchange.
+        /// Required. The parent resource path of the DataExchange.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="dataExchange">
-        /// Required. The data exchange to create.
+        /// Required. The DataExchange to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -899,14 +884,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchange.
+        /// Required. The parent resource path of the DataExchange.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="dataExchange">
-        /// Required. The data exchange to create.
+        /// Required. The DataExchange to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -918,14 +903,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchange.
+        /// Required. The parent resource path of the DataExchange.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="dataExchange">
-        /// Required. The data exchange to create.
+        /// Required. The DataExchange to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -933,14 +918,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             CreateDataExchangeAsync(parent, dataExchange, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchange.
+        /// Required. The parent resource path of the DataExchange.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="dataExchange">
-        /// Required. The data exchange to create.
+        /// Required. The DataExchange to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -952,14 +937,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchange.
+        /// Required. The parent resource path of the DataExchange.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="dataExchange">
-        /// Required. The data exchange to create.
+        /// Required. The DataExchange to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -971,14 +956,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource path of the data exchange.
+        /// Required. The parent resource path of the DataExchange.
         /// e.g. `projects/myproject/locations/US`.
         /// </param>
         /// <param name="dataExchange">
-        /// Required. The data exchange to create.
+        /// Required. The DataExchange to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -986,7 +971,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             CreateDataExchangeAsync(parent, dataExchange, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing data exchange.
+        /// Updates the parameters of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -995,7 +980,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing data exchange.
+        /// Updates the parameters of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1004,7 +989,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing data exchange.
+        /// Updates the parameters of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1013,15 +998,16 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             UpdateDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing data exchange.
+        /// Updates the parameters of a single DataExchange.
         /// </summary>
         /// <param name="dataExchange">
-        /// Required. The data exchange to update.
+        /// Required. The DataExchange to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the data exchange
-        /// resource. The fields specified in the
-        /// `updateMask` are relative to the resource and are not a full request.
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// DataExchange resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1033,15 +1019,16 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing data exchange.
+        /// Updates the parameters of a single DataExchange.
         /// </summary>
         /// <param name="dataExchange">
-        /// Required. The data exchange to update.
+        /// Required. The DataExchange to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the data exchange
-        /// resource. The fields specified in the
-        /// `updateMask` are relative to the resource and are not a full request.
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// DataExchange resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1053,15 +1040,16 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing data exchange.
+        /// Updates the parameters of a single DataExchange.
         /// </summary>
         /// <param name="dataExchange">
-        /// Required. The data exchange to update.
+        /// Required. The DataExchange to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the data exchange
-        /// resource. The fields specified in the
-        /// `updateMask` are relative to the resource and are not a full request.
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// DataExchange resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1069,7 +1057,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             UpdateDataExchangeAsync(dataExchange, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1078,7 +1066,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1087,7 +1075,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1096,11 +1084,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             DeleteDataExchangeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. Resource name of the DataExchange to delete.
+        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1111,11 +1099,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. Resource name of the DataExchange to delete.
+        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1126,11 +1114,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. Resource name of the DataExchange to delete.
+        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1138,11 +1126,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             DeleteDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. Resource name of the DataExchange to delete.
+        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1153,11 +1141,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. Resource name of the DataExchange to delete.
+        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1168,11 +1156,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="name">
-        /// Required. The full name of the data exchange resource that you want to delete.
-        /// For example, `projects/myproject/locations/US/dataExchanges/123`.
+        /// Required. Resource name of the DataExchange to delete.
+        /// e.g. `projects/myproject/locations/US/dataExchanges/123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1180,7 +1168,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             DeleteDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all listings in a given project and location.
+        /// Lists Listings in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1189,7 +1177,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all listings in a given project and location.
+        /// Lists Listings in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1198,7 +1186,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all listings in a given project and location.
+        /// Lists Listings in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1223,7 +1211,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Lists all listings in a given project and location.
+        /// Lists Listings in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1248,7 +1236,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Lists all listings in a given project and location.
+        /// Lists Listings in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1273,7 +1261,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Lists all listings in a given project and location.
+        /// Lists Listings in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1298,7 +1286,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1307,7 +1295,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1316,7 +1304,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1325,7 +1313,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GetListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
@@ -1340,7 +1328,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
@@ -1355,7 +1343,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
@@ -1367,7 +1355,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GetListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
@@ -1382,7 +1370,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
@@ -1397,7 +1385,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the listing.
@@ -1409,7 +1397,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GetListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1418,7 +1406,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1427,7 +1415,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1436,7 +1424,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             CreateListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1455,7 +1443,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1474,7 +1462,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1489,7 +1477,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             CreateListingAsync(parent, listing, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1508,7 +1496,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1527,7 +1515,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource path of the listing.
@@ -1542,7 +1530,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             CreateListingAsync(parent, listing, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing listing.
+        /// Updates the parameters of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1551,7 +1539,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing listing.
+        /// Updates the parameters of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1560,7 +1548,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an existing listing.
+        /// Updates the parameters of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1569,15 +1557,16 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             UpdateListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an existing listing.
+        /// Updates the parameters of a single Listing.
         /// </summary>
         /// <param name="listing">
         /// Required. The listing to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the listing resource. The
-        /// fields specified in the `updateMask` are relative to the resource and are
-        /// not a full request.
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Listing resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1589,15 +1578,16 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing listing.
+        /// Updates the parameters of a single Listing.
         /// </summary>
         /// <param name="listing">
         /// Required. The listing to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the listing resource. The
-        /// fields specified in the `updateMask` are relative to the resource and are
-        /// not a full request.
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Listing resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1609,15 +1599,16 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Updates an existing listing.
+        /// Updates the parameters of a single Listing.
         /// </summary>
         /// <param name="listing">
         /// Required. The listing to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Field mask specifies the fields to update in the listing resource. The
-        /// fields specified in the `updateMask` are relative to the resource and are
-        /// not a full request.
+        /// Required. Field mask is used to specify the fields to be overwritten in the
+        /// Listing resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1625,7 +1616,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             UpdateListingAsync(listing, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1634,7 +1626,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1643,7 +1636,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1652,7 +1646,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             DeleteListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
@@ -1667,7 +1662,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
@@ -1682,7 +1678,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
@@ -1694,7 +1691,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             DeleteListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
@@ -1709,7 +1707,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
@@ -1724,7 +1723,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the listing to delete.
@@ -1736,11 +1736,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             DeleteListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1750,11 +1749,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1764,11 +1762,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1778,15 +1775,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             SubscribeListingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the listing that you want to subscribe to.
+        /// Required. Resource name of the listing to subscribe to.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1798,15 +1794,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the listing that you want to subscribe to.
+        /// Required. Resource name of the listing to subscribe to.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1818,15 +1813,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the listing that you want to subscribe to.
+        /// Required. Resource name of the listing to subscribe to.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1835,15 +1829,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             SubscribeListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the listing that you want to subscribe to.
+        /// Required. Resource name of the listing to subscribe to.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1855,15 +1848,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the listing that you want to subscribe to.
+        /// Required. Resource name of the listing to subscribe to.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1875,15 +1867,14 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the listing that you want to subscribe to.
+        /// Required. Resource name of the listing to subscribe to.
         /// e.g. `projects/myproject/locations/US/dataExchanges/123/listings/456`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1892,7 +1883,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             SubscribeListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the IAM policy.
+        /// Gets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1901,7 +1892,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the IAM policy.
+        /// Gets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1910,7 +1901,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the IAM policy.
+        /// Gets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1919,7 +1910,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the IAM policy.
+        /// Sets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1928,7 +1919,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the IAM policy.
+        /// Sets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1937,7 +1928,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the IAM policy.
+        /// Sets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1946,7 +1937,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the permissions that a caller has.
+        /// Returns the permissions that a caller has on a specified dataExchange or
+        /// listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1955,7 +1947,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the permissions that a caller has.
+        /// Returns the permissions that a caller has on a specified dataExchange or
+        /// listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1964,7 +1957,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the permissions that a caller has.
+        /// Returns the permissions that a caller has on a specified dataExchange or
+        /// listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1975,12 +1969,11 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
 
     /// <summary>AnalyticsHubService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// The `AnalyticsHubService` API facilitates data sharing within and across
-    /// organizations. It allows data providers to publish listings that reference
-    /// shared datasets. With Analytics Hub, users can discover and search for
-    /// listings that they have access to. Subscribers can view and subscribe to
-    /// listings. When you subscribe to a listing, Analytics Hub creates a linked
-    /// dataset in your project.
+    /// The AnalyticsHubService API facilitates data sharing within and across
+    /// organizations. It allows data providers to publish Listings --- a
+    /// discoverable and searchable SKU representing a dataset. Data consumers can
+    /// subscribe to Listings. Upon subscription, AnalyticsHub provisions a "Linked
+    /// Datasets" surfacing the data in the consumer's project.
     /// </remarks>
     public sealed partial class AnalyticsHubServiceClientImpl : AnalyticsHubServiceClient
     {
@@ -2026,7 +2019,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
             GrpcClient = grpcClient;
             AnalyticsHubServiceSettings effectiveSettings = settings ?? AnalyticsHubServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
-            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListDataExchanges = clientHelper.BuildApiCall<ListDataExchangesRequest, ListDataExchangesResponse>("ListDataExchanges", grpcClient.ListDataExchangesAsync, grpcClient.ListDataExchanges, effectiveSettings.ListDataExchangesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataExchanges);
             Modify_ListDataExchangesApiCall(ref _callListDataExchanges);
@@ -2112,9 +2104,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         /// <summary>The underlying gRPC AnalyticsHubService client</summary>
         public override AnalyticsHubService.AnalyticsHubServiceClient GrpcClient { get; }
 
-        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
-        public override gcl::LocationsClient LocationsClient { get; }
-
         partial void Modify_ListDataExchangesRequest(ref ListDataExchangesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListOrgDataExchangesRequest(ref ListOrgDataExchangesRequest request, ref gaxgrpc::CallSettings settings);
@@ -2146,7 +2135,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists all data exchanges in a given project and location.
+        /// Lists DataExchanges in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2158,7 +2147,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Lists all data exchanges in a given project and location.
+        /// Lists DataExchanges in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2170,8 +2159,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Lists all data exchanges from projects in a given organization and
-        /// location.
+        /// Lists DataExchanges from projects in a given organization and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2183,8 +2171,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Lists all data exchanges from projects in a given organization and
-        /// location.
+        /// Lists DataExchanges from projects in a given organization and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2196,7 +2183,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2208,7 +2195,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Gets the details of a data exchange.
+        /// Gets details of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2220,7 +2207,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2232,7 +2219,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new data exchange.
+        /// Creates a new DataExchange in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2244,7 +2231,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Updates an existing data exchange.
+        /// Updates the parameters of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2256,7 +2243,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Updates an existing data exchange.
+        /// Updates the parameters of a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2268,7 +2255,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2280,7 +2267,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Deletes an existing data exchange.
+        /// Deletes a single DataExchange.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2292,7 +2279,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Lists all listings in a given project and location.
+        /// Lists Listings in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2304,7 +2291,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Lists all listings in a given project and location.
+        /// Lists Listings in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2316,7 +2303,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2328,7 +2315,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Gets the details of a listing.
+        /// Gets details of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2340,7 +2327,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2352,7 +2339,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Creates a new listing.
+        /// Creates a new Listing in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2364,7 +2351,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Updates an existing listing.
+        /// Updates the parameters of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2376,7 +2363,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Updates an existing listing.
+        /// Updates the parameters of a single Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2388,7 +2375,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2400,7 +2388,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Deletes a listing.
+        /// Deletes a single Listing, as long as there are no subscriptions
+        /// associated with the source of this Listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2412,11 +2401,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2429,11 +2417,10 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Subscribes to a listing.
+        /// Subscribes to a single Listing.
         /// 
-        /// Currently, with Analytics Hub, you can create listings that
-        /// reference only BigQuery datasets.
-        /// Upon subscription to a listing for a BigQuery dataset, Analytics Hub
+        /// Data Exchange currently supports one type of Listing: a BigQuery dataset.
+        /// Upon subscription to a Listing for a BigQuery dataset, Data Exchange
         /// creates a linked dataset in the subscriber's project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2446,7 +2433,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Gets the IAM policy.
+        /// Gets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2458,7 +2445,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Gets the IAM policy.
+        /// Gets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2470,7 +2457,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Sets the IAM policy.
+        /// Sets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2482,7 +2469,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Sets the IAM policy.
+        /// Sets the IAM policy for a dataExchange or a listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2494,7 +2481,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Returns the permissions that a caller has.
+        /// Returns the permissions that a caller has on a specified dataExchange or
+        /// listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2506,7 +2494,8 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         }
 
         /// <summary>
-        /// Returns the permissions that a caller has.
+        /// Returns the permissions that a caller has on a specified dataExchange or
+        /// listing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2552,21 +2541,5 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1
         public scg::IEnumerator<Listing> GetEnumerator() => Listings.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public static partial class AnalyticsHubService
-    {
-        public partial class AnalyticsHubServiceClient
-        {
-            /// <summary>
-            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
-            /// this client.
-            /// </summary>
-            /// <returns>
-            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
-            /// </returns>
-            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
-                new gcl::Locations.LocationsClient(CallInvoker);
-        }
     }
 }

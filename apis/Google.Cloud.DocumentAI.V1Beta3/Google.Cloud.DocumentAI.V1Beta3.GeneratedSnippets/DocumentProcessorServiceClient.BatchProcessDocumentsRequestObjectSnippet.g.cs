@@ -17,7 +17,6 @@
 namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
 {
     // [START documentai_v1beta3_generated_DocumentProcessorService_BatchProcessDocuments_sync]
-    using Google.Api.Gax;
     using Google.Cloud.DocumentAI.V1Beta3;
     using Google.LongRunning;
 
@@ -35,7 +34,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3.Snippets
             // Initialize request argument(s)
             BatchProcessRequest request = new BatchProcessRequest
             {
-                ResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                ProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 SkipHumanReview = false,
                 InputDocuments = new BatchDocumentsInputConfig(),
                 DocumentOutputConfig = new DocumentOutputConfig(),

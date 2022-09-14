@@ -18,8 +18,8 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcbdc = Google.Cloud.BigQuery.DataExchange.Common;
 using gciv = Google.Cloud.Iam.V1;
-using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -37,7 +37,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void GetDataExchangeRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDataExchangeRequest request = new GetDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -63,7 +62,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task GetDataExchangeRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDataExchangeRequest request = new GetDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -91,7 +89,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void GetDataExchange()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDataExchangeRequest request = new GetDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -117,7 +114,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task GetDataExchangeAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDataExchangeRequest request = new GetDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -145,7 +141,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void GetDataExchangeResourceNames()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDataExchangeRequest request = new GetDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -171,7 +166,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task GetDataExchangeResourceNamesAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetDataExchangeRequest request = new GetDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -199,7 +193,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void CreateDataExchangeRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDataExchangeRequest request = new CreateDataExchangeRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -227,7 +220,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task CreateDataExchangeRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDataExchangeRequest request = new CreateDataExchangeRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -257,7 +249,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void CreateDataExchange()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDataExchangeRequest request = new CreateDataExchangeRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -284,7 +275,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task CreateDataExchangeAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDataExchangeRequest request = new CreateDataExchangeRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -313,7 +303,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void CreateDataExchangeResourceNames()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDataExchangeRequest request = new CreateDataExchangeRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -340,7 +329,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task CreateDataExchangeResourceNamesAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateDataExchangeRequest request = new CreateDataExchangeRequest
             {
                 ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
@@ -369,7 +357,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void UpdateDataExchangeRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDataExchangeRequest request = new UpdateDataExchangeRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -396,7 +383,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task UpdateDataExchangeRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDataExchangeRequest request = new UpdateDataExchangeRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -425,7 +411,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void UpdateDataExchange()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDataExchangeRequest request = new UpdateDataExchangeRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -452,7 +437,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task UpdateDataExchangeAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateDataExchangeRequest request = new UpdateDataExchangeRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -481,7 +465,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void DeleteDataExchangeRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDataExchangeRequest request = new DeleteDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -497,7 +480,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task DeleteDataExchangeRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDataExchangeRequest request = new DeleteDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -514,7 +496,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void DeleteDataExchange()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDataExchangeRequest request = new DeleteDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -530,7 +511,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task DeleteDataExchangeAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDataExchangeRequest request = new DeleteDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -547,7 +527,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void DeleteDataExchangeResourceNames()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDataExchangeRequest request = new DeleteDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -563,7 +542,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task DeleteDataExchangeResourceNamesAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteDataExchangeRequest request = new DeleteDataExchangeRequest
             {
                 DataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -580,7 +558,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void GetListingRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetListingRequest request = new GetListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -598,7 +575,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -614,7 +591,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task GetListingRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetListingRequest request = new GetListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -632,7 +608,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -650,7 +626,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void GetListing()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetListingRequest request = new GetListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -668,7 +643,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -684,7 +659,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task GetListingAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetListingRequest request = new GetListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -702,7 +676,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -720,7 +694,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void GetListingResourceNames()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetListingRequest request = new GetListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -738,7 +711,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -754,7 +727,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task GetListingResourceNamesAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             GetListingRequest request = new GetListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -772,7 +744,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -790,7 +762,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void CreateListingRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateListingRequest request = new CreateListingRequest
             {
                 ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -810,7 +781,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -826,7 +797,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task CreateListingRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateListingRequest request = new CreateListingRequest
             {
                 ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -846,7 +816,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -864,7 +834,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void CreateListing()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateListingRequest request = new CreateListingRequest
             {
                 ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -883,7 +852,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -899,7 +868,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task CreateListingAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateListingRequest request = new CreateListingRequest
             {
                 ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -918,7 +886,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -936,7 +904,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void CreateListingResourceNames()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateListingRequest request = new CreateListingRequest
             {
                 ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -955,7 +922,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -971,7 +938,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task CreateListingResourceNamesAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             CreateListingRequest request = new CreateListingRequest
             {
                 ParentAsDataExchangeName = DataExchangeName.FromProjectLocationDataExchange("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]"),
@@ -990,7 +956,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -1008,7 +974,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void UpdateListingRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateListingRequest request = new UpdateListingRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -1027,7 +992,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -1043,7 +1008,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task UpdateListingRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateListingRequest request = new UpdateListingRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -1062,7 +1026,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -1080,7 +1044,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void UpdateListing()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateListingRequest request = new UpdateListingRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -1099,7 +1062,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -1115,7 +1078,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task UpdateListingAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             UpdateListingRequest request = new UpdateListingRequest
             {
                 UpdateMask = new wkt::FieldMask(),
@@ -1134,7 +1096,7 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
                 DataProvider = new DataProvider(),
                 Categories =
                 {
-                    Listing.Types.Category.Unspecified,
+                    gcbdc::Category.Unspecified,
                 },
                 Publisher = new Publisher(),
                 RequestAccess = "request_accessb08507d9",
@@ -1152,7 +1114,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void DeleteListingRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1168,7 +1129,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task DeleteListingRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1185,7 +1145,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void DeleteListing()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1201,7 +1160,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task DeleteListingAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1218,7 +1176,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void DeleteListingResourceNames()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1234,7 +1191,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task DeleteListingResourceNamesAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             DeleteListingRequest request = new DeleteListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1251,7 +1207,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void SubscribeListingRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SubscribeListingRequest request = new SubscribeListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1269,7 +1224,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task SubscribeListingRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SubscribeListingRequest request = new SubscribeListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1289,7 +1243,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void SubscribeListing()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SubscribeListingRequest request = new SubscribeListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1306,7 +1259,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task SubscribeListingAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SubscribeListingRequest request = new SubscribeListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1325,7 +1277,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void SubscribeListingResourceNames()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SubscribeListingRequest request = new SubscribeListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1342,7 +1293,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task SubscribeListingResourceNamesAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             SubscribeListingRequest request = new SubscribeListingRequest
             {
                 ListingName = ListingName.FromProjectLocationDataExchangeListing("[PROJECT]", "[LOCATION]", "[DATA_EXCHANGE]", "[LISTING]"),
@@ -1361,7 +1311,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1391,7 +1340,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1423,7 +1371,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1454,7 +1401,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1487,7 +1433,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
@@ -1514,7 +1459,6 @@ namespace Google.Cloud.BigQuery.DataExchange.V1Beta1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient> mockGrpcClient = new moq::Mock<AnalyticsHubService.AnalyticsHubServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateLocationsClient()).Returns(new moq::Mock<gcl::Locations.LocationsClient>().Object);
             gciv::TestIamPermissionsRequest request = new gciv::TestIamPermissionsRequest
             {
                 ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),

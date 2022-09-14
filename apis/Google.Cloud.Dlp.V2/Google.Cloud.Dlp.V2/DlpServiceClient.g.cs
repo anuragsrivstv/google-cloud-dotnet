@@ -18,7 +18,6 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
-using gcl = Google.Cloud.Location;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -82,7 +81,6 @@ namespace Google.Cloud.Dlp.V2
             DeleteStoredInfoTypeSettings = existing.DeleteStoredInfoTypeSettings;
             HybridInspectDlpJobSettings = existing.HybridInspectDlpJobSettings;
             FinishDlpJobSettings = existing.FinishDlpJobSettings;
-            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -676,11 +674,6 @@ namespace Google.Cloud.Dlp.V2
         /// </remarks>
         public gaxgrpc::CallSettings FinishDlpJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
-        /// <summary>
-        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
-        /// </summary>
-        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
-
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DlpServiceSettings"/> object.</returns>
         public DlpServiceSettings Clone() => new DlpServiceSettings(this);
@@ -827,9 +820,6 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>The underlying gRPC DlpService client</summary>
         public virtual DlpService.DlpServiceClient GrpcClient => throw new sys::NotImplementedException();
-
-        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
-        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Finds potentially sensitive info in content.
@@ -1015,7 +1005,7 @@ namespace Google.Cloud.Dlp.V2
             ReidentifyContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
@@ -1026,7 +1016,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
@@ -1037,7 +1027,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
@@ -1048,7 +1038,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
@@ -1057,7 +1047,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value is as follows:
         /// 
-        /// locations/&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// locations/&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1065,7 +1055,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypes(new ListInfoTypesRequest { Parent = parent ?? "", }, callSettings);
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
@@ -1074,7 +1064,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value is as follows:
         /// 
-        /// locations/&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// locations/&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1082,7 +1072,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypesAsync(new ListInfoTypesRequest { Parent = parent ?? "", }, callSettings);
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
@@ -1091,7 +1081,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value is as follows:
         /// 
-        /// locations/&lt;var&gt;LOCATION_ID&lt;/var&gt;
+        /// locations/&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1099,7 +1089,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1110,7 +1100,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1121,7 +1111,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1132,7 +1122,7 @@ namespace Google.Cloud.Dlp.V2
             CreateInspectTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1143,14 +1133,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1171,7 +1161,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1182,14 +1172,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1210,7 +1200,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1221,14 +1211,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1245,7 +1235,7 @@ namespace Google.Cloud.Dlp.V2
             CreateInspectTemplateAsync(parent, inspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1256,14 +1246,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1284,7 +1274,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1295,14 +1285,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1323,7 +1313,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1334,14 +1324,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1358,7 +1348,7 @@ namespace Google.Cloud.Dlp.V2
             CreateInspectTemplateAsync(parent, inspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1369,14 +1359,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1397,7 +1387,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1408,14 +1398,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1436,7 +1426,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1447,14 +1437,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1471,7 +1461,7 @@ namespace Google.Cloud.Dlp.V2
             CreateInspectTemplateAsync(parent, inspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1482,14 +1472,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1510,7 +1500,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1521,14 +1511,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1549,7 +1539,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1560,14 +1550,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1584,7 +1574,7 @@ namespace Google.Cloud.Dlp.V2
             CreateInspectTemplateAsync(parent, inspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1595,14 +1585,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1623,7 +1613,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1634,14 +1624,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -1662,7 +1652,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -1673,14 +1663,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2023,14 +2013,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2067,14 +2057,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2111,14 +2101,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2155,14 +2145,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2199,14 +2189,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2243,14 +2233,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2287,14 +2277,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2331,14 +2321,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2375,14 +2365,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2419,14 +2409,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2579,7 +2569,7 @@ namespace Google.Cloud.Dlp.V2
             DeleteInspectTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2591,7 +2581,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2603,7 +2593,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2615,7 +2605,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDeidentifyTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2627,14 +2617,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2655,7 +2645,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2667,14 +2657,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2695,7 +2685,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2707,14 +2697,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2731,7 +2721,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2743,14 +2733,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2771,7 +2761,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2783,14 +2773,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2811,7 +2801,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2823,14 +2813,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2847,7 +2837,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2859,14 +2849,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2887,7 +2877,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2899,14 +2889,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2927,7 +2917,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2939,14 +2929,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -2963,7 +2953,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -2975,14 +2965,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3003,7 +2993,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -3015,14 +3005,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3043,7 +3033,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -3055,14 +3045,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3079,7 +3069,7 @@ namespace Google.Cloud.Dlp.V2
             CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -3091,14 +3081,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3119,7 +3109,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -3131,14 +3121,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3159,7 +3149,7 @@ namespace Google.Cloud.Dlp.V2
             }, callSettings);
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -3171,14 +3161,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3542,14 +3532,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3587,14 +3577,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3632,14 +3622,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3677,14 +3667,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3722,14 +3712,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3767,14 +3757,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3812,14 +3802,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3857,14 +3847,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3902,14 +3892,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -3947,14 +3937,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4160,10 +4150,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4195,10 +4185,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4230,10 +4220,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4261,10 +4251,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4296,10 +4286,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4331,10 +4321,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4362,10 +4352,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4397,10 +4387,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4432,10 +4422,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4895,10 +4885,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4935,10 +4925,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -4975,10 +4965,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5015,10 +5005,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5055,10 +5045,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5095,10 +5085,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5335,10 +5325,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5374,10 +5364,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5413,10 +5403,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5448,10 +5438,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5487,10 +5477,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5526,10 +5516,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5561,10 +5551,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5600,10 +5590,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5639,10 +5629,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5674,10 +5664,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5714,10 +5704,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5754,10 +5744,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5790,10 +5780,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5830,10 +5820,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5870,10 +5860,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5906,10 +5896,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5946,10 +5936,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -5986,10 +5976,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6040,10 +6030,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6081,10 +6071,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6122,10 +6112,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6163,10 +6153,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6204,10 +6194,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6245,10 +6235,10 @@ namespace Google.Cloud.Dlp.V2
         /// processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6399,7 +6389,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6412,7 +6402,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6425,7 +6415,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6438,7 +6428,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6456,7 +6446,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6474,7 +6464,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6489,7 +6479,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6507,7 +6497,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6525,7 +6515,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -6622,14 +6612,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6661,14 +6651,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6700,14 +6690,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6735,14 +6725,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6774,14 +6764,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6813,14 +6803,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6848,14 +6838,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6887,14 +6877,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6926,14 +6916,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -6961,14 +6951,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7000,14 +6990,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7039,14 +7029,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7074,14 +7064,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7113,14 +7103,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7152,14 +7142,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
-        /// + Organizations scope, location specified:&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Organizations scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `organizations/`&lt;var&gt;ORG_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7544,10 +7534,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7585,10 +7579,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7626,10 +7624,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7667,10 +7669,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7708,10 +7714,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7749,10 +7759,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7790,10 +7804,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7831,10 +7849,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7872,10 +7894,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -7913,10 +7939,14 @@ namespace Google.Cloud.Dlp.V2
         /// (project or organization) and whether you have [specified a processing
         /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
-        /// + Projects scope, location specified:&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;`/locations/`&lt;var&gt;LOCATION_ID&lt;/var&gt;
-        /// + Projects scope, no location specified (defaults to global):&lt;br/&gt;
-        /// `projects/`&lt;var&gt;PROJECT_ID&lt;/var&gt;
+        /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Projects scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, location specified:&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
+        /// + Organizations scope, no location specified (defaults to global):&amp;lt;br/&amp;gt;
+        /// `organizations/`&amp;lt;var&amp;gt;ORG_ID&amp;lt;/var&amp;gt;
         /// 
         /// The following example `parent` string specifies a parent project with the
         /// identifier `example-project`, and specifies the `europe-west3` location
@@ -8330,7 +8360,6 @@ namespace Google.Cloud.Dlp.V2
             GrpcClient = grpcClient;
             DlpServiceSettings effectiveSettings = settings ?? DlpServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings, logger);
-            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callInspectContent = clientHelper.BuildApiCall<InspectContentRequest, InspectContentResponse>("InspectContent", grpcClient.InspectContentAsync, grpcClient.InspectContent, effectiveSettings.InspectContentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callInspectContent);
             Modify_InspectContentApiCall(ref _callInspectContent);
@@ -8510,9 +8539,6 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>The underlying gRPC DlpService client</summary>
         public override DlpService.DlpServiceClient GrpcClient { get; }
-
-        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
-        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_InspectContentRequest(ref InspectContentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8729,7 +8755,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
@@ -8743,7 +8769,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
@@ -8757,7 +8783,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -8771,7 +8797,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates an InspectTemplate for reusing frequently used configuration
+        /// Creates an InspectTemplate for re-using frequently used configuration
         /// for inspecting content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
@@ -8889,7 +8915,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -8904,7 +8930,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Creates a DeidentifyTemplate for reusing frequently used configuration
+        /// Creates a DeidentifyTemplate for re-using frequently used configuration
         /// for de-identifying content, images, and storage.
         /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
         /// more.
@@ -9310,7 +9336,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -9326,7 +9352,7 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Deletes a long-running DlpJob. This method indicates that the client is
-        /// no longer interested in the DlpJob result. The job will be canceled if
+        /// no longer interested in the DlpJob result. The job will be cancelled if
         /// possible.
         /// See https://cloud.google.com/dlp/docs/inspecting-storage and
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
@@ -9627,21 +9653,5 @@ namespace Google.Cloud.Dlp.V2
         public scg::IEnumerator<StoredInfoType> GetEnumerator() => StoredInfoTypes.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
-    }
-
-    public static partial class DlpService
-    {
-        public partial class DlpServiceClient
-        {
-            /// <summary>
-            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
-            /// this client.
-            /// </summary>
-            /// <returns>
-            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
-            /// </returns>
-            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
-                new gcl::Locations.LocationsClient(CallInvoker);
-        }
     }
 }

@@ -10,24 +10,6 @@
         "grpc": {
           "libraryClient": "CatalogServiceClient",
           "rpcs": {
-            "AddCatalogAttribute": {
-              "methods": [
-                "AddCatalogAttribute",
-                "AddCatalogAttributeAsync"
-              ]
-            },
-            "GetAttributesConfig": {
-              "methods": [
-                "GetAttributesConfig",
-                "GetAttributesConfigAsync"
-              ]
-            },
-            "GetCompletionConfig": {
-              "methods": [
-                "GetCompletionConfig",
-                "GetCompletionConfigAsync"
-              ]
-            },
             "GetDefaultBranch": {
               "methods": [
                 "GetDefaultBranch",
@@ -40,40 +22,16 @@
                 "ListCatalogsAsync"
               ]
             },
-            "RemoveCatalogAttribute": {
-              "methods": [
-                "RemoveCatalogAttribute",
-                "RemoveCatalogAttributeAsync"
-              ]
-            },
-            "ReplaceCatalogAttribute": {
-              "methods": [
-                "ReplaceCatalogAttribute",
-                "ReplaceCatalogAttributeAsync"
-              ]
-            },
             "SetDefaultBranch": {
               "methods": [
                 "SetDefaultBranch",
                 "SetDefaultBranchAsync"
               ]
             },
-            "UpdateAttributesConfig": {
-              "methods": [
-                "UpdateAttributesConfig",
-                "UpdateAttributesConfigAsync"
-              ]
-            },
             "UpdateCatalog": {
               "methods": [
                 "UpdateCatalog",
                 "UpdateCatalogAsync"
-              ]
-            },
-            "UpdateCompletionConfig": {
-              "methods": [
-                "UpdateCompletionConfig",
-                "UpdateCompletionConfigAsync"
               ]
             }
           }
@@ -95,45 +53,6 @@
               "methods": [
                 "ImportCompletionData",
                 "ImportCompletionDataAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "ControlService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "ControlServiceClient",
-          "rpcs": {
-            "CreateControl": {
-              "methods": [
-                "CreateControl",
-                "CreateControlAsync"
-              ]
-            },
-            "DeleteControl": {
-              "methods": [
-                "DeleteControl",
-                "DeleteControlAsync"
-              ]
-            },
-            "GetControl": {
-              "methods": [
-                "GetControl",
-                "GetControlAsync"
-              ]
-            },
-            "ListControls": {
-              "methods": [
-                "ListControls",
-                "ListControlsAsync"
-              ]
-            },
-            "UpdateControl": {
-              "methods": [
-                "UpdateControl",
-                "UpdateControlAsync"
               ]
             }
           }
@@ -239,57 +158,6 @@
               "methods": [
                 "Search",
                 "SearchAsync"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "ServingConfigService": {
-      "clients": {
-        "grpc": {
-          "libraryClient": "ServingConfigServiceClient",
-          "rpcs": {
-            "AddControl": {
-              "methods": [
-                "AddControl",
-                "AddControlAsync"
-              ]
-            },
-            "CreateServingConfig": {
-              "methods": [
-                "CreateServingConfig",
-                "CreateServingConfigAsync"
-              ]
-            },
-            "DeleteServingConfig": {
-              "methods": [
-                "DeleteServingConfig",
-                "DeleteServingConfigAsync"
-              ]
-            },
-            "GetServingConfig": {
-              "methods": [
-                "GetServingConfig",
-                "GetServingConfigAsync"
-              ]
-            },
-            "ListServingConfigs": {
-              "methods": [
-                "ListServingConfigs",
-                "ListServingConfigsAsync"
-              ]
-            },
-            "RemoveControl": {
-              "methods": [
-                "RemoveControl",
-                "RemoveControlAsync"
-              ]
-            },
-            "UpdateServingConfig": {
-              "methods": [
-                "UpdateServingConfig",
-                "UpdateServingConfigAsync"
               ]
             }
           }

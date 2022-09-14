@@ -100,12 +100,6 @@
                 "ListSavedQueriesAsync"
               ]
             },
-            "QueryAssets": {
-              "methods": [
-                "QueryAssets",
-                "QueryAssetsAsync"
-              ]
-            },
             "SearchAllIamPolicies": {
               "methods": [
                 "SearchAllIamPolicies",

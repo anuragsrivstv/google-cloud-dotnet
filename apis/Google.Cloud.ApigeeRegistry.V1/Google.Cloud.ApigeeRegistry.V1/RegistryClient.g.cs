@@ -98,21 +98,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListApisSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListApisSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegistryClient.GetApi</c>
@@ -120,21 +116,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetApiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetApiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegistryClient.CreateApi</c>
@@ -142,21 +134,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateApiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateApiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegistryClient.UpdateApi</c>
@@ -164,21 +152,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateApiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings UpdateApiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegistryClient.DeleteApi</c>
@@ -186,21 +170,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteApiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteApiSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -208,21 +188,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListApiVersionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListApiVersionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -230,21 +206,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetApiVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetApiVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -252,21 +224,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateApiVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateApiVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -274,21 +242,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateApiVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings UpdateApiVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -296,21 +260,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteApiVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteApiVersionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegistryClient.ListApiSpecs</c>
@@ -318,21 +278,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListApiSpecsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListApiSpecsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegistryClient.GetApiSpec</c>
@@ -340,21 +296,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetApiSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetApiSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -362,21 +314,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetApiSpecContentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetApiSpecContentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -384,21 +332,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateApiSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateApiSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -406,21 +350,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateApiSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings UpdateApiSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -428,21 +368,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteApiSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteApiSpecSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -450,21 +386,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings TagApiSpecRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings TagApiSpecRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -472,21 +404,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListApiSpecRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListApiSpecRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -506,21 +434,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteApiSpecRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteApiSpecRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -528,21 +452,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListApiDeploymentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListApiDeploymentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -550,21 +470,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetApiDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetApiDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -572,21 +488,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateApiDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateApiDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -594,21 +506,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateApiDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings UpdateApiDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -616,21 +524,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteApiDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteApiDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -638,21 +542,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings TagApiDeploymentRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings TagApiDeploymentRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -660,21 +560,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListApiDeploymentRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListApiDeploymentRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -695,21 +591,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteApiDeploymentRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteApiDeploymentRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -717,21 +609,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListArtifactsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListArtifactsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegistryClient.GetArtifact</c>
@@ -739,21 +627,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetArtifactSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetArtifactSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -761,21 +645,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetArtifactContentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetArtifactContentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -783,21 +663,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateArtifactSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings CreateArtifactSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -805,21 +681,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ReplaceArtifactSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ReplaceArtifactSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -827,21 +699,17 @@ namespace Google.Cloud.ApigeeRegistry.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 200 milliseconds.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item>
-        /// <description>
-        /// Retriable status codes: <see cref="grpccore::StatusCode.Aborted"/>,
-        /// <see cref="grpccore::StatusCode.Cancelled"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
-        /// <see cref="grpccore::StatusCode.Unavailable"/>.
-        /// </description>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
         /// </item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteArtifactSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(200), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Aborted, grpccore::StatusCode.Cancelled, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteArtifactSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1000,7 +868,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching APIs.
+        /// ListApis returns matching APIs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1009,7 +877,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching APIs.
+        /// ListApis returns matching APIs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1018,11 +886,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching APIs.
+        /// ListApis returns matching APIs.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1043,11 +911,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching APIs.
+        /// ListApis returns matching APIs.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1068,11 +936,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching APIs.
+        /// ListApis returns matching APIs.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1093,11 +961,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching APIs.
+        /// ListApis returns matching APIs.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1118,7 +986,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1127,7 +995,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1136,7 +1004,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1145,11 +1013,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to retrieve.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1160,11 +1028,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to retrieve.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1175,11 +1043,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to retrieve.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1187,11 +1055,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to retrieve.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1202,11 +1070,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to retrieve.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1217,11 +1085,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to retrieve.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1229,7 +1097,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1238,7 +1106,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1247,7 +1115,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1256,18 +1124,18 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="api">
         /// Required. The API to create.
         /// </param>
         /// <param name="apiId">
-        /// Required. The ID to use for the API, which will become the final component of
-        /// the API's resource name.
+        /// Required. The ID to use for the api, which will become the final component of
+        /// the api's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1285,18 +1153,18 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="api">
         /// Required. The API to create.
         /// </param>
         /// <param name="apiId">
-        /// Required. The ID to use for the API, which will become the final component of
-        /// the API's resource name.
+        /// Required. The ID to use for the api, which will become the final component of
+        /// the api's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1314,18 +1182,18 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="api">
         /// Required. The API to create.
         /// </param>
         /// <param name="apiId">
-        /// Required. The ID to use for the API, which will become the final component of
-        /// the API's resource name.
+        /// Required. The ID to use for the api, which will become the final component of
+        /// the api's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1338,18 +1206,18 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiAsync(parent, api, apiId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="api">
         /// Required. The API to create.
         /// </param>
         /// <param name="apiId">
-        /// Required. The ID to use for the API, which will become the final component of
-        /// the API's resource name.
+        /// Required. The ID to use for the api, which will become the final component of
+        /// the api's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1367,18 +1235,18 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="api">
         /// Required. The API to create.
         /// </param>
         /// <param name="apiId">
-        /// Required. The ID to use for the API, which will become the final component of
-        /// the API's resource name.
+        /// Required. The ID to use for the api, which will become the final component of
+        /// the api's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1396,18 +1264,18 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of APIs.
-        /// Format: `projects/*/locations/*`
+        /// Format: projects/*/locations/*
         /// </param>
         /// <param name="api">
         /// Required. The API to create.
         /// </param>
         /// <param name="apiId">
-        /// Required. The ID to use for the API, which will become the final component of
-        /// the API's resource name.
+        /// Required. The ID to use for the api, which will become the final component of
+        /// the api's resource name.
         /// 
         /// This value should be 4-63 characters, and valid characters
         /// are /[a-z][0-9]-/.
@@ -1420,7 +1288,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiAsync(parent, api, apiId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to modify a specified API.
+        /// UpdateApi can be used to modify a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1429,7 +1297,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to modify a specified API.
+        /// UpdateApi can be used to modify a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1438,7 +1306,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to modify a specified API.
+        /// UpdateApi can be used to modify a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1447,19 +1315,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             UpdateApiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to modify a specified API.
+        /// UpdateApi can be used to modify a specified API.
         /// </summary>
         /// <param name="api">
         /// Required. The API to update.
         /// 
         /// The `name` field is used to identify the API to update.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1471,19 +1339,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to modify a specified API.
+        /// UpdateApi can be used to modify a specified API.
         /// </summary>
         /// <param name="api">
         /// Required. The API to update.
         /// 
         /// The `name` field is used to identify the API to update.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1495,19 +1363,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to modify a specified API.
+        /// UpdateApi can be used to modify a specified API.
         /// </summary>
         /// <param name="api">
         /// Required. The API to update.
         /// 
         /// The `name` field is used to identify the API to update.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1515,7 +1383,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             UpdateApiAsync(api, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1525,7 +1393,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1535,7 +1403,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1545,12 +1413,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to delete.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1561,12 +1429,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to delete.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1577,12 +1445,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to delete.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1590,12 +1458,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to delete.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1606,12 +1474,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to delete.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1622,12 +1490,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the API to delete.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1635,7 +1503,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns matching versions.
+        /// ListApiVersions returns matching versions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1644,7 +1512,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching versions.
+        /// ListApiVersions returns matching versions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1653,11 +1521,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching versions.
+        /// ListApiVersions returns matching versions.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1678,11 +1546,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching versions.
+        /// ListApiVersions returns matching versions.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1703,11 +1571,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching versions.
+        /// ListApiVersions returns matching versions.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1728,11 +1596,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching versions.
+        /// ListApiVersions returns matching versions.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1753,7 +1621,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1762,7 +1630,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1771,7 +1639,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1780,11 +1648,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1795,11 +1663,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1810,11 +1678,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1822,11 +1690,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1837,11 +1705,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1852,11 +1720,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1864,7 +1732,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1873,7 +1741,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1882,7 +1750,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1891,11 +1759,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiVersion">
         /// Required. The version to create.
@@ -1920,11 +1788,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiVersion">
         /// Required. The version to create.
@@ -1949,11 +1817,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiVersion">
         /// Required. The version to create.
@@ -1973,11 +1841,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiVersionAsync(parent, apiVersion, apiVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiVersion">
         /// Required. The version to create.
@@ -2002,11 +1870,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiVersion">
         /// Required. The version to create.
@@ -2031,11 +1899,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of versions.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiVersion">
         /// Required. The version to create.
@@ -2055,7 +1923,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiVersionAsync(parent, apiVersion, apiVersionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to modify a specified version.
+        /// UpdateApiVersion can be used to modify a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2064,7 +1932,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to modify a specified version.
+        /// UpdateApiVersion can be used to modify a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2073,7 +1941,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to modify a specified version.
+        /// UpdateApiVersion can be used to modify a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2082,19 +1950,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             UpdateApiVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to modify a specified version.
+        /// UpdateApiVersion can be used to modify a specified version.
         /// </summary>
         /// <param name="apiVersion">
         /// Required. The version to update.
         /// 
         /// The `name` field is used to identify the version to update.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2106,19 +1974,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to modify a specified version.
+        /// UpdateApiVersion can be used to modify a specified version.
         /// </summary>
         /// <param name="apiVersion">
         /// Required. The version to update.
         /// 
         /// The `name` field is used to identify the version to update.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2130,19 +1998,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to modify a specified version.
+        /// UpdateApiVersion can be used to modify a specified version.
         /// </summary>
         /// <param name="apiVersion">
         /// Required. The version to update.
         /// 
         /// The `name` field is used to identify the version to update.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2150,7 +2018,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             UpdateApiVersionAsync(apiVersion, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2160,7 +2028,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2170,7 +2038,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2180,12 +2048,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2196,12 +2064,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2212,12 +2080,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2225,12 +2093,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2241,12 +2109,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2257,12 +2125,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the version to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2270,7 +2138,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns matching specs.
+        /// ListApiSpecs returns matching specs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2279,7 +2147,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching specs.
+        /// ListApiSpecs returns matching specs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2288,11 +2156,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching specs.
+        /// ListApiSpecs returns matching specs.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2313,11 +2181,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching specs.
+        /// ListApiSpecs returns matching specs.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2338,11 +2206,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching specs.
+        /// ListApiSpecs returns matching specs.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2363,11 +2231,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching specs.
+        /// ListApiSpecs returns matching specs.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2388,7 +2256,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2397,7 +2265,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2406,7 +2274,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2415,11 +2283,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2430,11 +2298,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2445,11 +2313,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2457,11 +2325,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2472,11 +2340,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2487,11 +2355,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2499,7 +2367,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -2511,7 +2379,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -2523,7 +2391,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -2535,14 +2403,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiSpecContentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec whose contents should be retrieved.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2553,14 +2421,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec whose contents should be retrieved.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2571,14 +2439,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec whose contents should be retrieved.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2586,14 +2454,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiSpecContentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec whose contents should be retrieved.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2604,14 +2472,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec whose contents should be retrieved.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2622,14 +2490,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec whose contents should be retrieved.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2637,7 +2505,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiSpecContentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2646,7 +2514,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2655,7 +2523,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2664,11 +2532,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="apiSpec">
         /// Required. The spec to create.
@@ -2693,11 +2561,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="apiSpec">
         /// Required. The spec to create.
@@ -2722,11 +2590,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="apiSpec">
         /// Required. The spec to create.
@@ -2746,11 +2614,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiSpecAsync(parent, apiSpec, apiSpecId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="apiSpec">
         /// Required. The spec to create.
@@ -2775,11 +2643,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="apiSpec">
         /// Required. The spec to create.
@@ -2804,11 +2672,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of specs.
-        /// Format: `projects/*/locations/*/apis/*/versions/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*
         /// </param>
         /// <param name="apiSpec">
         /// Required. The spec to create.
@@ -2828,7 +2696,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiSpecAsync(parent, apiSpec, apiSpecId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to modify a specified spec.
+        /// UpdateApiSpec can be used to modify a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2837,7 +2705,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to modify a specified spec.
+        /// UpdateApiSpec can be used to modify a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2846,7 +2714,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to modify a specified spec.
+        /// UpdateApiSpec can be used to modify a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2855,19 +2723,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             UpdateApiSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to modify a specified spec.
+        /// UpdateApiSpec can be used to modify a specified spec.
         /// </summary>
         /// <param name="apiSpec">
         /// Required. The spec to update.
         /// 
         /// The `name` field is used to identify the spec to update.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2879,19 +2747,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to modify a specified spec.
+        /// UpdateApiSpec can be used to modify a specified spec.
         /// </summary>
         /// <param name="apiSpec">
         /// Required. The spec to update.
         /// 
         /// The `name` field is used to identify the spec to update.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2903,19 +2771,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to modify a specified spec.
+        /// UpdateApiSpec can be used to modify a specified spec.
         /// </summary>
         /// <param name="apiSpec">
         /// Required. The spec to update.
         /// 
         /// The `name` field is used to identify the spec to update.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2923,8 +2791,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
             UpdateApiSpecAsync(apiSpec, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2933,8 +2801,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2943,8 +2811,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2953,12 +2821,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2969,12 +2837,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2985,12 +2853,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2998,12 +2866,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3014,12 +2882,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3030,12 +2898,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec to delete.
-        /// Format: `projects/*/locations/*/apis/*/versions/*/specs/*`
+        /// Format: projects/*/locations/*/apis/*/versions/*/specs/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3043,7 +2911,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Adds a tag to a specified revision of a spec.
+        /// TagApiSpecRevision adds a tag to a specified revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3052,7 +2920,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a tag to a specified revision of a spec.
+        /// TagApiSpecRevision adds a tag to a specified revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3061,7 +2929,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a tag to a specified revision of a spec.
+        /// TagApiSpecRevision adds a tag to a specified revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3070,7 +2938,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             TagApiSpecRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all revisions of a spec.
+        /// ListApiSpecRevisions lists all revisions of a spec.
         /// Revisions are returned in descending order of revision creation time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3080,7 +2948,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all revisions of a spec.
+        /// ListApiSpecRevisions lists all revisions of a spec.
         /// Revisions are returned in descending order of revision creation time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3090,7 +2958,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the current revision to a specified prior revision.
+        /// RollbackApiSpec sets the current revision to a specified prior revision.
         /// Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3100,7 +2968,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the current revision to a specified prior revision.
+        /// RollbackApiSpec sets the current revision to a specified prior revision.
         /// Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3110,7 +2978,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the current revision to a specified prior revision.
+        /// RollbackApiSpec sets the current revision to a specified prior revision.
         /// Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3120,7 +2988,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             RollbackApiSpecAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3129,7 +2997,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3138,7 +3006,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3147,14 +3015,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiSpecRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3165,14 +3033,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3183,14 +3051,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3198,14 +3066,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiSpecRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3216,14 +3084,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3234,14 +3102,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/versions/1.0.0/specs/openapi.yaml@c7cfa2a8
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3249,7 +3117,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiSpecRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns matching deployments.
+        /// ListApiDeployments returns matching deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3258,7 +3126,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching deployments.
+        /// ListApiDeployments returns matching deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3267,11 +3135,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching deployments.
+        /// ListApiDeployments returns matching deployments.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3292,11 +3160,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching deployments.
+        /// ListApiDeployments returns matching deployments.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3317,11 +3185,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching deployments.
+        /// ListApiDeployments returns matching deployments.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3342,11 +3210,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching deployments.
+        /// ListApiDeployments returns matching deployments.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3367,7 +3235,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3376,7 +3244,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3385,7 +3253,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3394,11 +3262,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3409,11 +3277,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3424,11 +3292,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3436,11 +3304,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3451,11 +3319,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3466,11 +3334,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to retrieve.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3478,7 +3346,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetApiDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3487,7 +3355,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3496,7 +3364,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3505,11 +3373,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiDeployment">
         /// Required. The deployment to create.
@@ -3534,11 +3402,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiDeployment">
         /// Required. The deployment to create.
@@ -3563,11 +3431,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiDeployment">
         /// Required. The deployment to create.
@@ -3587,11 +3455,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiDeploymentAsync(parent, apiDeployment, apiDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiDeployment">
         /// Required. The deployment to create.
@@ -3616,11 +3484,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiDeployment">
         /// Required. The deployment to create.
@@ -3645,11 +3513,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of deployments.
-        /// Format: `projects/*/locations/*/apis/*`
+        /// Format: projects/*/locations/*/apis/*
         /// </param>
         /// <param name="apiDeployment">
         /// Required. The deployment to create.
@@ -3669,7 +3537,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateApiDeploymentAsync(parent, apiDeployment, apiDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to modify a specified deployment.
+        /// UpdateApiDeployment can be used to modify a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3678,7 +3546,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to modify a specified deployment.
+        /// UpdateApiDeployment can be used to modify a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3687,7 +3555,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to modify a specified deployment.
+        /// UpdateApiDeployment can be used to modify a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3696,19 +3564,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             UpdateApiDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to modify a specified deployment.
+        /// UpdateApiDeployment can be used to modify a specified deployment.
         /// </summary>
         /// <param name="apiDeployment">
         /// Required. The deployment to update.
         /// 
         /// The `name` field is used to identify the deployment to update.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3720,19 +3588,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to modify a specified deployment.
+        /// UpdateApiDeployment can be used to modify a specified deployment.
         /// </summary>
         /// <param name="apiDeployment">
         /// Required. The deployment to update.
         /// 
         /// The `name` field is used to identify the deployment to update.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3744,19 +3612,19 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to modify a specified deployment.
+        /// UpdateApiDeployment can be used to modify a specified deployment.
         /// </summary>
         /// <param name="apiDeployment">
         /// Required. The deployment to update.
         /// 
         /// The `name` field is used to identify the deployment to update.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated. If omitted, all fields are updated that
         /// are set in the request message (fields set to default values are ignored).
-        /// If an asterisk "*" is specified, all fields are updated, including fields
-        /// that are unspecified/default in the request.
+        /// If a "*" is specified, all fields are updated, including fields that are
+        /// unspecified/default in the request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3764,8 +3632,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
             UpdateApiDeploymentAsync(apiDeployment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3774,8 +3642,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3784,8 +3652,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3794,12 +3662,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to delete.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3810,12 +3678,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to delete.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3826,12 +3694,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to delete.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3839,12 +3707,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to delete.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3855,12 +3723,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to delete.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3871,12 +3739,12 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment to delete.
-        /// Format: `projects/*/locations/*/apis/*/deployments/*`
+        /// Format: projects/*/locations/*/apis/*/deployments/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3884,7 +3752,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Adds a tag to a specified revision of a
+        /// TagApiDeploymentRevision adds a tag to a specified revision of a
         /// deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3894,7 +3762,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a tag to a specified revision of a
+        /// TagApiDeploymentRevision adds a tag to a specified revision of a
         /// deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3904,7 +3772,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Adds a tag to a specified revision of a
+        /// TagApiDeploymentRevision adds a tag to a specified revision of a
         /// deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3914,7 +3782,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             TagApiDeploymentRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all revisions of a deployment.
+        /// ListApiDeploymentRevisions lists all revisions of a deployment.
         /// Revisions are returned in descending order of revision creation time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3924,7 +3792,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all revisions of a deployment.
+        /// ListApiDeploymentRevisions lists all revisions of a deployment.
         /// Revisions are returned in descending order of revision creation time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3934,7 +3802,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the current revision to a specified prior
+        /// RollbackApiDeployment sets the current revision to a specified prior
         /// revision. Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3944,7 +3812,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the current revision to a specified prior
+        /// RollbackApiDeployment sets the current revision to a specified prior
         /// revision. Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3954,7 +3822,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the current revision to a specified prior
+        /// RollbackApiDeployment sets the current revision to a specified prior
         /// revision. Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3964,7 +3832,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             RollbackApiDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3973,7 +3841,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3982,7 +3850,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3991,14 +3859,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiDeploymentRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4009,14 +3877,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4027,14 +3895,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4042,14 +3910,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiDeploymentRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4060,14 +3928,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4078,14 +3946,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment revision to be deleted,
         /// with a revision ID explicitly included.
         /// 
         /// Example:
-        /// `projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8`
+        /// projects/sample/locations/global/apis/petstore/deployments/prod@c7cfa2a8
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4093,7 +3961,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteApiDeploymentRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4102,7 +3970,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4111,11 +3979,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4136,11 +4004,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4161,11 +4029,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4186,11 +4054,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4211,11 +4079,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4236,11 +4104,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4261,11 +4129,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4286,11 +4154,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4311,11 +4179,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4336,11 +4204,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4361,11 +4229,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4386,11 +4254,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4411,7 +4279,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4420,7 +4288,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4429,7 +4297,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4438,11 +4306,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetArtifactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to retrieve.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4453,11 +4321,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to retrieve.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4468,11 +4336,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to retrieve.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4480,11 +4348,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetArtifactAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to retrieve.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4495,11 +4363,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to retrieve.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4510,11 +4378,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to retrieve.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4522,7 +4390,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetArtifactAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -4534,7 +4402,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -4546,7 +4414,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -4558,14 +4426,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetArtifactContentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact whose contents should be retrieved.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4576,14 +4444,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact whose contents should be retrieved.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4594,14 +4462,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact whose contents should be retrieved.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4609,14 +4477,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetArtifactContentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact whose contents should be retrieved.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4627,14 +4495,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact whose contents should be retrieved.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4645,14 +4513,14 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact whose contents should be retrieved.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4660,7 +4528,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             GetArtifactContentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4669,7 +4537,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4678,7 +4546,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4687,11 +4555,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateArtifactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4716,11 +4584,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4745,11 +4613,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4769,11 +4637,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateArtifactAsync(parent, artifact, artifactId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4798,11 +4666,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4827,11 +4695,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4851,11 +4719,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateArtifactAsync(parent, artifact, artifactId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4880,11 +4748,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4909,11 +4777,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4933,11 +4801,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateArtifactAsync(parent, artifact, artifactId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4962,11 +4830,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -4991,11 +4859,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -5015,11 +4883,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateArtifactAsync(parent, artifact, artifactId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -5044,11 +4912,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -5073,11 +4941,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -5097,11 +4965,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateArtifactAsync(parent, artifact, artifactId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -5126,11 +4994,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -5155,11 +5023,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of artifacts.
-        /// Format: `{parent}`
+        /// Format: {parent}
         /// </param>
         /// <param name="artifact">
         /// Required. The artifact to create.
@@ -5179,7 +5047,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             CreateArtifactAsync(parent, artifact, artifactId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to replace a specified artifact.
+        /// ReplaceArtifact can be used to replace a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5188,7 +5056,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to replace a specified artifact.
+        /// ReplaceArtifact can be used to replace a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5197,7 +5065,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Used to replace a specified artifact.
+        /// ReplaceArtifact can be used to replace a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5206,13 +5074,13 @@ namespace Google.Cloud.ApigeeRegistry.V1
             ReplaceArtifactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Used to replace a specified artifact.
+        /// ReplaceArtifact can be used to replace a specified artifact.
         /// </summary>
         /// <param name="artifact">
         /// Required. The artifact to replace.
         /// 
         /// The `name` field is used to identify the artifact to replace.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5223,13 +5091,13 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to replace a specified artifact.
+        /// ReplaceArtifact can be used to replace a specified artifact.
         /// </summary>
         /// <param name="artifact">
         /// Required. The artifact to replace.
         /// 
         /// The `name` field is used to identify the artifact to replace.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5240,13 +5108,13 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Used to replace a specified artifact.
+        /// ReplaceArtifact can be used to replace a specified artifact.
         /// </summary>
         /// <param name="artifact">
         /// Required. The artifact to replace.
         /// 
         /// The `name` field is used to identify the artifact to replace.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5254,7 +5122,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             ReplaceArtifactAsync(artifact, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5263,7 +5131,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5272,7 +5140,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5281,11 +5149,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteArtifactAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to delete.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5296,11 +5164,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to delete.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5311,11 +5179,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to delete.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5323,11 +5191,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             DeleteArtifactAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to delete.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5338,11 +5206,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to delete.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5353,11 +5221,11 @@ namespace Google.Cloud.ApigeeRegistry.V1
             }, callSettings);
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the artifact to delete.
-        /// Format: `{parent}/artifacts/*`
+        /// Format: {parent}/artifacts/*
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5716,7 +5584,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         partial void Modify_DeleteArtifactRequest(ref DeleteArtifactRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Returns matching APIs.
+        /// ListApis returns matching APIs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5728,7 +5596,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching APIs.
+        /// ListApis returns matching APIs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5740,7 +5608,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5752,7 +5620,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified API.
+        /// GetApi returns a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5764,7 +5632,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5776,7 +5644,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified API.
+        /// CreateApi creates a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5788,7 +5656,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to modify a specified API.
+        /// UpdateApi can be used to modify a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5800,7 +5668,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to modify a specified API.
+        /// UpdateApi can be used to modify a specified API.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5812,7 +5680,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5825,7 +5693,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified API and all of the resources that it
+        /// DeleteApi removes a specified API and all of the resources that it
         /// owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5838,7 +5706,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching versions.
+        /// ListApiVersions returns matching versions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5850,7 +5718,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching versions.
+        /// ListApiVersions returns matching versions.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5862,7 +5730,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5874,7 +5742,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified version.
+        /// GetApiVersion returns a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5886,7 +5754,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5898,7 +5766,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified version.
+        /// CreateApiVersion creates a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5910,7 +5778,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to modify a specified version.
+        /// UpdateApiVersion can be used to modify a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5922,7 +5790,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to modify a specified version.
+        /// UpdateApiVersion can be used to modify a specified version.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5934,7 +5802,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5947,7 +5815,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified version and all of the resources that
+        /// DeleteApiVersion removes a specified version and all of the resources that
         /// it owns.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5960,7 +5828,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching specs.
+        /// ListApiSpecs returns matching specs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5972,7 +5840,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching specs.
+        /// ListApiSpecs returns matching specs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5984,7 +5852,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5996,7 +5864,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified spec.
+        /// GetApiSpec returns a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6008,7 +5876,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -6023,7 +5891,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns the contents of a specified spec.
+        /// GetApiSpecContents returns the contents of a specified spec.
         /// If specs are stored with GZip compression, the default behavior
         /// is to return the spec uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -6038,7 +5906,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6050,7 +5918,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified spec.
+        /// CreateApiSpec creates a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6062,7 +5930,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to modify a specified spec.
+        /// UpdateApiSpec can be used to modify a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6074,7 +5942,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to modify a specified spec.
+        /// UpdateApiSpec can be used to modify a specified spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6086,8 +5954,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6099,8 +5967,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified spec, all revisions, and all child
-        /// resources (e.g., artifacts).
+        /// DeleteApiSpec removes a specified spec, all revisions, and all child
+        /// resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6112,7 +5980,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Adds a tag to a specified revision of a spec.
+        /// TagApiSpecRevision adds a tag to a specified revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6124,7 +5992,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Adds a tag to a specified revision of a spec.
+        /// TagApiSpecRevision adds a tag to a specified revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6136,7 +6004,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Lists all revisions of a spec.
+        /// ListApiSpecRevisions lists all revisions of a spec.
         /// Revisions are returned in descending order of revision creation time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6149,7 +6017,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Lists all revisions of a spec.
+        /// ListApiSpecRevisions lists all revisions of a spec.
         /// Revisions are returned in descending order of revision creation time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6162,7 +6030,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Sets the current revision to a specified prior revision.
+        /// RollbackApiSpec sets the current revision to a specified prior revision.
         /// Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6175,7 +6043,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Sets the current revision to a specified prior revision.
+        /// RollbackApiSpec sets the current revision to a specified prior revision.
         /// Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6188,7 +6056,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6200,7 +6068,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Deletes a revision of a spec.
+        /// DeleteApiSpecRevision deletes a revision of a spec.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6212,7 +6080,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching deployments.
+        /// ListApiDeployments returns matching deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6224,7 +6092,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching deployments.
+        /// ListApiDeployments returns matching deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6236,7 +6104,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6248,7 +6116,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified deployment.
+        /// GetApiDeployment returns a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6260,7 +6128,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6272,7 +6140,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified deployment.
+        /// CreateApiDeployment creates a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6284,7 +6152,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to modify a specified deployment.
+        /// UpdateApiDeployment can be used to modify a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6296,7 +6164,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to modify a specified deployment.
+        /// UpdateApiDeployment can be used to modify a specified deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6308,8 +6176,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6321,8 +6189,8 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified deployment, all revisions, and all
-        /// child resources (e.g., artifacts).
+        /// DeleteApiDeployment removes a specified deployment, all revisions, and all
+        /// child resources (e.g. artifacts).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6334,7 +6202,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Adds a tag to a specified revision of a
+        /// TagApiDeploymentRevision adds a tag to a specified revision of a
         /// deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6347,7 +6215,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Adds a tag to a specified revision of a
+        /// TagApiDeploymentRevision adds a tag to a specified revision of a
         /// deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6360,7 +6228,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Lists all revisions of a deployment.
+        /// ListApiDeploymentRevisions lists all revisions of a deployment.
         /// Revisions are returned in descending order of revision creation time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6373,7 +6241,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Lists all revisions of a deployment.
+        /// ListApiDeploymentRevisions lists all revisions of a deployment.
         /// Revisions are returned in descending order of revision creation time.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6386,7 +6254,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Sets the current revision to a specified prior
+        /// RollbackApiDeployment sets the current revision to a specified prior
         /// revision. Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6399,7 +6267,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Sets the current revision to a specified prior
+        /// RollbackApiDeployment sets the current revision to a specified prior
         /// revision. Note that this creates a new revision with a new revision ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6412,7 +6280,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6424,7 +6292,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Deletes a revision of a deployment.
+        /// DeleteApiDeploymentRevision deletes a revision of a deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6436,7 +6304,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6448,7 +6316,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns matching artifacts.
+        /// ListArtifacts returns matching artifacts.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6460,7 +6328,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6472,7 +6340,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns a specified artifact.
+        /// GetArtifact returns a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6484,7 +6352,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -6499,7 +6367,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Returns the contents of a specified artifact.
+        /// GetArtifactContents returns the contents of a specified artifact.
         /// If artifacts are stored with GZip compression, the default behavior
         /// is to return the artifact uncompressed (the mime_type response field
         /// indicates the exact format returned).
@@ -6514,7 +6382,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6526,7 +6394,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Creates a specified artifact.
+        /// CreateArtifact creates a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6538,7 +6406,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to replace a specified artifact.
+        /// ReplaceArtifact can be used to replace a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6550,7 +6418,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Used to replace a specified artifact.
+        /// ReplaceArtifact can be used to replace a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6562,7 +6430,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6574,7 +6442,7 @@ namespace Google.Cloud.ApigeeRegistry.V1
         }
 
         /// <summary>
-        /// Removes a specified artifact.
+        /// DeleteArtifact removes a specified artifact.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

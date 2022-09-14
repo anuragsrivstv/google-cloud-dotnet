@@ -7,6 +7,9 @@
       <FilterEntry>
         <ModuleMask>Google.Cloud.BigQuery.DataExchange.V1Beta1</ModuleMask>
       </FilterEntry>
+      <FilterEntry>
+        <ModuleMask>Google.Cloud.BigQuery.DataExchange.Common</ModuleMask>
+      </FilterEntry>
     </IncludeFilters>
   </Filters>
   <AttributeFilters>

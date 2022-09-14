@@ -323,8 +323,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to list all versions from.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -351,8 +351,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to list all versions from.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -379,8 +379,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to list all versions from.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -407,8 +407,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to list all versions from.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -462,9 +462,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -481,9 +481,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -500,9 +500,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -516,9 +516,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -535,9 +535,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -554,9 +554,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -605,8 +605,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to create a version for.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -629,8 +629,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to create a version for.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -653,8 +653,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to create a version for.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -673,8 +673,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to create a version for.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -697,8 +697,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to create a version for.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -721,8 +721,8 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The agent to create a version for.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent`
+        /// - `projects/{Project ID}/agent`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent`
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -782,9 +782,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The version to update.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="updateMask">
         /// Required. The mask to control which fields get updated.
@@ -809,9 +809,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The version to update.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="updateMask">
         /// Required. The mask to control which fields get updated.
@@ -836,9 +836,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The version to update.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="updateMask">
         /// Required. The mask to control which fields get updated.
@@ -882,9 +882,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version to delete.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -901,9 +901,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version to delete.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -920,9 +920,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version to delete.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -936,9 +936,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version to delete.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -955,9 +955,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version to delete.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -974,9 +974,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// Required. The name of the version to delete.
         /// Supported formats:
         /// 
-        /// - `projects/&lt;Project ID&gt;/agent/versions/&lt;Version ID&gt;`
-        /// - `projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agent/versions/&lt;Version
-        /// ID&gt;`
+        /// - `projects/{Project ID}/agent/versions/{Version ID}`
+        /// - `projects/{Project ID}/locations/{Location ID}/agent/versions/{Version
+        /// ID&amp;gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

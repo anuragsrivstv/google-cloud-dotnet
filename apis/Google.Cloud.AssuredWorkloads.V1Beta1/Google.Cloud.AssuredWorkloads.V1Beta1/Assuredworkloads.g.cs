@@ -37,59 +37,65 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "IpUBChVVcGRhdGVXb3JrbG9hZFJlcXVlc3QSRgoId29ya2xvYWQYASABKAsy",
             "Ly5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmts",
             "b2FkQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuRmllbGRNYXNrQgPgQQIinAIKH1Jlc3RyaWN0QWxsb3dlZFJlc291cmNl",
-            "c1JlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEnUKEHJlc3RyaWN0aW9uX3R5",
-            "cGUYAiABKA4yVi5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJl",
-            "dGExLlJlc3RyaWN0QWxsb3dlZFJlc291cmNlc1JlcXVlc3QuUmVzdHJpY3Rp",
-            "b25UeXBlQgPgQQIibwoPUmVzdHJpY3Rpb25UeXBlEiAKHFJFU1RSSUNUSU9O",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIbChdBTExPV19BTExfR0NQX1JFU09VUkNF",
-            "UxABEh0KGUFMTE9XX0NPTVBMSUFOVF9SRVNPVVJDRVMQAiIiCiBSZXN0cmlj",
-            "dEFsbG93ZWRSZXNvdXJjZXNSZXNwb25zZSJqChVEZWxldGVXb3JrbG9hZFJl",
-            "cXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEqCihhc3N1cmVkd29ya2xvYWRz",
-            "Lmdvb2dsZWFwaXMuY29tL1dvcmtsb2FkEhEKBGV0YWcYAiABKAlCA+BBASJU",
-            "ChJHZXRXb3JrbG9hZFJlcXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEqCihh",
-            "c3N1cmVkd29ya2xvYWRzLmdvb2dsZWFwaXMuY29tL1dvcmtsb2FkInMKGkFu",
-            "YWx5emVXb3JrbG9hZE1vdmVSZXF1ZXN0EhAKBnNvdXJjZRgBIAEoCUgAEhEK",
-            "B3Byb2plY3QYAyABKAlIABITCgZ0YXJnZXQYAiABKAlCA+BBAkIbChlwcm9q",
-            "ZWN0T3JXb3JrbG9hZFJlc291cmNlIi8KG0FuYWx5emVXb3JrbG9hZE1vdmVS",
-            "ZXNwb25zZRIQCghibG9ja2VycxgBIAMoCSKPAQoUTGlzdFdvcmtsb2Fkc1Jl",
-            "cXVlc3QSQAoGcGFyZW50GAEgASgJQjDgQQL6QSoSKGFzc3VyZWR3b3JrbG9h",
-            "ZHMuZ29vZ2xlYXBpcy5jb20vV29ya2xvYWQSEQoJcGFnZV9zaXplGAIgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJInQKFUxpc3RX",
-            "b3JrbG9hZHNSZXNwb25zZRJCCgl3b3JrbG9hZHMYASADKAsyLy5nb29nbGUu",
-            "Y2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSLSGwoIV29ya2xvYWQSEQoEbmFtZRgBIAEo",
-            "CUID4EEBEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECElQKCXJlc291cmNl",
-            "cxgDIAMoCzI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0",
-            "YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvQgPgQQMSYwoRY29tcGxpYW5jZV9y",
-            "ZWdpbWUYBCABKA4yQC5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52",
-            "MWJldGExLldvcmtsb2FkLkNvbXBsaWFuY2VSZWdpbWVCBuBBAuBBBRI3Cgtj",
-            "cmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "BuBBA+BBBRIcCg9iaWxsaW5nX2FjY291bnQYBiABKAlCA+BBAxJdCgxpbDRf",
-            "c2V0dGluZ3MYByABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fk",
-            "cy52MWJldGExLldvcmtsb2FkLklMNFNldHRpbmdzQggYAeBBBOBBBUgAEl8K",
-            "DWNqaXNfc2V0dGluZ3MYCCABKAsyPC5nb29nbGUuY2xvdWQuYXNzdXJlZHdv",
-            "cmtsb2Fkcy52MWJldGExLldvcmtsb2FkLkNKSVNTZXR0aW5nc0IIGAHgQQTg",
-            "QQVIABJuChVmZWRyYW1wX2hpZ2hfc2V0dGluZ3MYCyABKAsyQy5nb29nbGUu",
-            "Y2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLkZlZHJh",
-            "bXBIaWdoU2V0dGluZ3NCCBgB4EEE4EEFSAASdgoZZmVkcmFtcF9tb2RlcmF0",
-            "ZV9zZXR0aW5ncxgMIAEoCzJHLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xv",
-            "YWRzLnYxYmV0YTEuV29ya2xvYWQuRmVkcmFtcE1vZGVyYXRlU2V0dGluZ3NC",
-            "CBgB4EEE4EEFSAASEQoEZXRhZxgJIAEoCUID4EEBElAKBmxhYmVscxgKIAMo",
-            "CzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29y",
-            "a2xvYWQuTGFiZWxzRW50cnlCA+BBARIpChxwcm92aXNpb25lZF9yZXNvdXJj",
-            "ZXNfcGFyZW50GA0gASgJQgPgQQQSWAoMa21zX3NldHRpbmdzGA4gASgLMjsu",
-            "Z29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9h",
-            "ZC5LTVNTZXR0aW5nc0IFGAHgQQQSYAoRcmVzb3VyY2Vfc2V0dGluZ3MYDyAD",
-            "KAsyQC5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldv",
-            "cmtsb2FkLlJlc291cmNlU2V0dGluZ3NCA+BBBBJlChRrYWpfZW5yb2xsbWVu",
-            "dF9zdGF0ZRgRIAEoDjJCLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRz",
-            "LnYxYmV0YTEuV29ya2xvYWQuS2FqRW5yb2xsbWVudFN0YXRlQgPgQQMSJgoZ",
-            "ZW5hYmxlX3NvdmVyZWlnbl9jb250cm9scxgSIAEoCEID4EEBEmsKF3NhYV9l",
-            "bnJvbGxtZW50X3Jlc3BvbnNlGBQgASgLMkUuZ29vZ2xlLmNsb3VkLmFzc3Vy",
-            "ZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5TYWFFbnJvbGxtZW50UmVz",
-            "cG9uc2VCA+BBAxIuCiFjb21wbGlhbnRfYnV0X2Rpc2FsbG93ZWRfc2Vydmlj",
-            "ZXMYGCADKAlCA+BBAxqOAgoMUmVzb3VyY2VJbmZvEhMKC3Jlc291cmNlX2lk",
+            "dWYuRmllbGRNYXNrQgPgQQIimAIKHlJlc3RyaWN0QWxsb3dlZFNlcnZpY2Vz",
+            "UmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQISdAoQcmVzdHJpY3Rpb25fdHlw",
+            "ZRgCIAEoDjJVLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0",
+            "YTEuUmVzdHJpY3RBbGxvd2VkU2VydmljZXNSZXF1ZXN0LlJlc3RyaWN0aW9u",
+            "VHlwZUID4EECIm0KD1Jlc3RyaWN0aW9uVHlwZRIgChxSRVNUUklDVElPTl9U",
+            "WVBFX1VOU1BFQ0lGSUVEEAASGgoWQUxMT1dfQUxMX0dDUF9TRVJWSUNFUxAB",
+            "EhwKGEFMTE9XX0NPTVBMSUFOVF9TRVJWSUNFUxACIiEKH1Jlc3RyaWN0QWxs",
+            "b3dlZFNlcnZpY2VzUmVzcG9uc2UinAIKH1Jlc3RyaWN0QWxsb3dlZFJlc291",
+            "cmNlc1JlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEnUKEHJlc3RyaWN0aW9u",
+            "X3R5cGUYAiABKA4yVi5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52",
+            "MWJldGExLlJlc3RyaWN0QWxsb3dlZFJlc291cmNlc1JlcXVlc3QuUmVzdHJp",
+            "Y3Rpb25UeXBlQgPgQQIibwoPUmVzdHJpY3Rpb25UeXBlEiAKHFJFU1RSSUNU",
+            "SU9OX1RZUEVfVU5TUEVDSUZJRUQQABIbChdBTExPV19BTExfR0NQX1JFU09V",
+            "UkNFUxABEh0KGUFMTE9XX0NPTVBMSUFOVF9SRVNPVVJDRVMQAiIiCiBSZXN0",
+            "cmljdEFsbG93ZWRSZXNvdXJjZXNSZXNwb25zZSJqChVEZWxldGVXb3JrbG9h",
+            "ZFJlcXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEqCihhc3N1cmVkd29ya2xv",
+            "YWRzLmdvb2dsZWFwaXMuY29tL1dvcmtsb2FkEhEKBGV0YWcYAiABKAlCA+BB",
+            "ASJUChJHZXRXb3JrbG9hZFJlcXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEq",
+            "Cihhc3N1cmVkd29ya2xvYWRzLmdvb2dsZWFwaXMuY29tL1dvcmtsb2FkInMK",
+            "GkFuYWx5emVXb3JrbG9hZE1vdmVSZXF1ZXN0EhAKBnNvdXJjZRgBIAEoCUgA",
+            "EhEKB3Byb2plY3QYAyABKAlIABITCgZ0YXJnZXQYAiABKAlCA+BBAkIbChlw",
+            "cm9qZWN0T3JXb3JrbG9hZFJlc291cmNlIi8KG0FuYWx5emVXb3JrbG9hZE1v",
+            "dmVSZXNwb25zZRIQCghibG9ja2VycxgBIAMoCSKPAQoUTGlzdFdvcmtsb2Fk",
+            "c1JlcXVlc3QSQAoGcGFyZW50GAEgASgJQjDgQQL6QSoSKGFzc3VyZWR3b3Jr",
+            "bG9hZHMuZ29vZ2xlYXBpcy5jb20vV29ya2xvYWQSEQoJcGFnZV9zaXplGAIg",
+            "ASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJInQKFUxp",
+            "c3RXb3JrbG9hZHNSZXNwb25zZRJCCgl3b3JrbG9hZHMYASADKAsyLy5nb29n",
+            "bGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkEhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCSKDGwoIV29ya2xvYWQSEQoEbmFtZRgB",
+            "IAEoCUID4EEBEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECElQKCXJlc291",
+            "cmNlcxgDIAMoCzI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYx",
+            "YmV0YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvQgPgQQMSYwoRY29tcGxpYW5j",
+            "ZV9yZWdpbWUYBCABKA4yQC5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fk",
+            "cy52MWJldGExLldvcmtsb2FkLkNvbXBsaWFuY2VSZWdpbWVCBuBBAuBBBRI3",
+            "CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCBuBBA+BBBRIcCg9iaWxsaW5nX2FjY291bnQYBiABKAlCA+BBBBJdCgxp",
+            "bDRfc2V0dGluZ3MYByABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmts",
+            "b2Fkcy52MWJldGExLldvcmtsb2FkLklMNFNldHRpbmdzQggYAeBBBOBBBUgA",
+            "El8KDWNqaXNfc2V0dGluZ3MYCCABKAsyPC5nb29nbGUuY2xvdWQuYXNzdXJl",
+            "ZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLkNKSVNTZXR0aW5nc0IIGAHg",
+            "QQTgQQVIABJuChVmZWRyYW1wX2hpZ2hfc2V0dGluZ3MYCyABKAsyQy5nb29n",
+            "bGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLkZl",
+            "ZHJhbXBIaWdoU2V0dGluZ3NCCBgB4EEE4EEFSAASdgoZZmVkcmFtcF9tb2Rl",
+            "cmF0ZV9zZXR0aW5ncxgMIAEoCzJHLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29y",
+            "a2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuRmVkcmFtcE1vZGVyYXRlU2V0dGlu",
+            "Z3NCCBgB4EEE4EEFSAASEQoEZXRhZxgJIAEoCUID4EEBElAKBmxhYmVscxgK",
+            "IAMoCzI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEu",
+            "V29ya2xvYWQuTGFiZWxzRW50cnlCA+BBARIpChxwcm92aXNpb25lZF9yZXNv",
+            "dXJjZXNfcGFyZW50GA0gASgJQgPgQQQSWAoMa21zX3NldHRpbmdzGA4gASgL",
+            "MjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3Jr",
+            "bG9hZC5LTVNTZXR0aW5nc0IFGAHgQQQSYAoRcmVzb3VyY2Vfc2V0dGluZ3MY",
+            "DyADKAsyQC5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGEx",
+            "Lldvcmtsb2FkLlJlc291cmNlU2V0dGluZ3NCA+BBBBJlChRrYWpfZW5yb2xs",
+            "bWVudF9zdGF0ZRgRIAEoDjJCLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xv",
+            "YWRzLnYxYmV0YTEuV29ya2xvYWQuS2FqRW5yb2xsbWVudFN0YXRlQgPgQQMS",
+            "JgoZZW5hYmxlX3NvdmVyZWlnbl9jb250cm9scxgSIAEoCEID4EEBEmsKF3Nh",
+            "YV9lbnJvbGxtZW50X3Jlc3BvbnNlGBQgASgLMkUuZ29vZ2xlLmNsb3VkLmFz",
+            "c3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5TYWFFbnJvbGxtZW50",
+            "UmVzcG9uc2VCA+BBAxqOAgoMUmVzb3VyY2VJbmZvEhMKC3Jlc291cmNlX2lk",
             "GAEgASgDEmAKDXJlc291cmNlX3R5cGUYAiABKA4ySS5nb29nbGUuY2xvdWQu",
             "YXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLlJlc291cmNlSW5m",
             "by5SZXNvdXJjZVR5cGUihgEKDFJlc291cmNlVHlwZRIdChlSRVNPVVJDRV9U",
@@ -125,40 +131,41 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "R05JTkdfS0VZEAISIwofRVJST1JfTk9UX0FMTF9TRVJWSUNFU19FTlJPTExF",
             "RBADEhwKGEVSUk9SX1NFVFVQX0NIRUNLX0ZBSUxFRBAEQg8KDV9zZXR1cF9z",
             "dGF0dXMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
-            "ASgJOgI4ASKBAgoQQ29tcGxpYW5jZVJlZ2ltZRIhCh1DT01QTElBTkNFX1JF",
+            "ASgJOgI4ASLiAQoQQ29tcGxpYW5jZVJlZ2ltZRIhCh1DT01QTElBTkNFX1JF",
             "R0lNRV9VTlNQRUNJRklFRBAAEgcKA0lMNBABEggKBENKSVMQAhIQCgxGRURS",
             "QU1QX0hJR0gQAxIUChBGRURSQU1QX01PREVSQVRFEAQSFgoSVVNfUkVHSU9O",
             "QUxfQUNDRVNTEAUSCQoFSElQQUEQBhILCgdISVRSVVNUEAcSGgoWRVVfUkVH",
             "SU9OU19BTkRfU1VQUE9SVBAIEhoKFkNBX1JFR0lPTlNfQU5EX1NVUFBPUlQQ",
-            "CRIICgRJVEFSEAoSHQoZQVVfUkVHSU9OU19BTkRfVVNfU1VQUE9SVBALIn8K",
-            "EkthakVucm9sbG1lbnRTdGF0ZRIkCiBLQUpfRU5ST0xMTUVOVF9TVEFURV9V",
-            "TlNQRUNJRklFRBAAEiAKHEtBSl9FTlJPTExNRU5UX1NUQVRFX1BFTkRJTkcQ",
-            "ARIhCh1LQUpfRU5ST0xMTUVOVF9TVEFURV9DT01QTEVURRACOnXqQXIKKGFz",
-            "c3VyZWR3b3JrbG9hZHMuZ29vZ2xlYXBpcy5jb20vV29ya2xvYWQSRm9yZ2Fu",
-            "aXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "d29ya2xvYWRzL3t3b3JrbG9hZH1CHAoaY29tcGxpYW5jZV9yZWdpbWVfc2V0",
-            "dGluZ3MiywIKH0NyZWF0ZVdvcmtsb2FkT3BlcmF0aW9uTWV0YWRhdGESNAoL",
-            "Y3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQESGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQESEwoGcGFyZW50GAMg",
-            "ASgJQgPgQQESYAoRY29tcGxpYW5jZV9yZWdpbWUYBCABKA4yQC5nb29nbGUu",
-            "Y2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLkNvbXBs",
-            "aWFuY2VSZWdpbWVCA+BBARJgChFyZXNvdXJjZV9zZXR0aW5ncxgFIAMoCzJA",
-            "Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xv",
-            "YWQuUmVzb3VyY2VTZXR0aW5nc0ID4EEBQvYCCiljb20uZ29vZ2xlLmNsb3Vk",
-            "LmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMUIVQXNzdXJlZHdvcmtsb2Fkc1By",
-            "b3RvUAFaVWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "Y2xvdWQvYXNzdXJlZHdvcmtsb2Fkcy92MWJldGExO2Fzc3VyZWR3b3JrbG9h",
-            "ZHOqAiVHb29nbGUuQ2xvdWQuQXNzdXJlZFdvcmtsb2Fkcy5WMUJldGExygIl",
-            "R29vZ2xlXENsb3VkXEFzc3VyZWRXb3JrbG9hZHNcVjFiZXRhMeoCKEdvb2ds",
-            "ZTo6Q2xvdWQ6OkFzc3VyZWRXb3JrbG9hZHM6OlYxYmV0YTHqQV0KKGFzc3Vy",
-            "ZWR3b3JrbG9hZHMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SMW9yZ2FuaXph",
-            "dGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn1iBnBy",
-            "b3RvMw=="));
+            "CRIICgRJVEFSEAoifwoSS2FqRW5yb2xsbWVudFN0YXRlEiQKIEtBSl9FTlJP",
+            "TExNRU5UX1NUQVRFX1VOU1BFQ0lGSUVEEAASIAocS0FKX0VOUk9MTE1FTlRf",
+            "U1RBVEVfUEVORElORxABEiEKHUtBSl9FTlJPTExNRU5UX1NUQVRFX0NPTVBM",
+            "RVRFEAI6depBcgooYXNzdXJlZHdvcmtsb2Fkcy5nb29nbGVhcGlzLmNvbS9X",
+            "b3JrbG9hZBJGb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS93b3JrbG9hZHMve3dvcmtsb2FkfUIcChpjb21wbGlh",
+            "bmNlX3JlZ2ltZV9zZXR0aW5ncyLLAgofQ3JlYXRlV29ya2xvYWRPcGVyYXRp",
+            "b25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBARIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BB",
+            "ARITCgZwYXJlbnQYAyABKAlCA+BBARJgChFjb21wbGlhbmNlX3JlZ2ltZRgE",
+            "IAEoDjJALmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEu",
+            "V29ya2xvYWQuQ29tcGxpYW5jZVJlZ2ltZUID4EEBEmAKEXJlc291cmNlX3Nl",
+            "dHRpbmdzGAUgAygLMkAuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMu",
+            "djFiZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZVNldHRpbmdzQgPgQQFC9gIKKWNv",
+            "bS5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExQhVBc3N1",
+            "cmVkd29ya2xvYWRzUHJvdG9QAVpVZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9hc3N1cmVkd29ya2xvYWRzL3YxYmV0YTE7",
+            "YXNzdXJlZHdvcmtsb2Fkc6oCJUdvb2dsZS5DbG91ZC5Bc3N1cmVkV29ya2xv",
+            "YWRzLlYxQmV0YTHKAiVHb29nbGVcQ2xvdWRcQXNzdXJlZFdvcmtsb2Fkc1xW",
+            "MWJldGEx6gIoR29vZ2xlOjpDbG91ZDo6QXNzdXJlZFdvcmtsb2Fkczo6VjFi",
+            "ZXRhMepBXQooYXNzdXJlZHdvcmtsb2Fkcy5nb29nbGVhcGlzLmNvbS9Mb2Nh",
+            "dGlvbhIxb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest.Parser, new[]{ "Parent", "Workload", "ExternalId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest.Parser, new[]{ "Workload", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Parser, new[]{ "Name", "RestrictionType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest.Parser, new[]{ "Name", "RestrictionType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest.Types.RestrictionType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest.Parser, new[]{ "Name", "Etag" }, null, null, null, null),
@@ -167,7 +174,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse.Parser, new[]{ "Blockers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse.Parser, new[]{ "Workloads", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser, new[]{ "Name", "DisplayName", "Resources", "ComplianceRegime", "CreateTime", "BillingAccount", "Il4Settings", "CjisSettings", "FedrampHighSettings", "FedrampModerateSettings", "Etag", "Labels", "ProvisionedResourcesParent", "KmsSettings", "ResourceSettings", "KajEnrollmentState", "EnableSovereignControls", "SaaEnrollmentResponse", "CompliantButDisallowedServices" }, new[]{ "ComplianceRegimeSettings" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime), typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Parser, new[]{ "ResourceId", "ResourceType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser, new[]{ "Name", "DisplayName", "Resources", "ComplianceRegime", "CreateTime", "BillingAccount", "Il4Settings", "CjisSettings", "FedrampHighSettings", "FedrampModerateSettings", "Etag", "Labels", "ProvisionedResourcesParent", "KmsSettings", "ResourceSettings", "KajEnrollmentState", "EnableSovereignControls", "SaaEnrollmentResponse" }, new[]{ "ComplianceRegimeSettings" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime), typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Parser, new[]{ "ResourceId", "ResourceType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings.Parser, new[]{ "NextRotationTime", "RotationPeriod" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.IL4Settings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.IL4Settings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.CJISSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.CJISSettings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
@@ -728,6 +735,429 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
   }
 
   /// <summary>
+  /// Request for restricting list of available services in Workload environment.
+  /// </summary>
+  public sealed partial class RestrictAllowedServicesRequest : pb::IMessage<RestrictAllowedServicesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RestrictAllowedServicesRequest> _parser = new pb::MessageParser<RestrictAllowedServicesRequest>(() => new RestrictAllowedServicesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RestrictAllowedServicesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestrictAllowedServicesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestrictAllowedServicesRequest(RestrictAllowedServicesRequest other) : this() {
+      name_ = other.name_;
+      restrictionType_ = other.restrictionType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestrictAllowedServicesRequest Clone() {
+      return new RestrictAllowedServicesRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the Workload. This is the workloads's
+    /// relative path in the API, formatted as
+    /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
+    /// For example,
+    /// "organizations/123/locations/us-east1/workloads/assured-workload-1".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "restriction_type" field.</summary>
+    public const int RestrictionTypeFieldNumber = 2;
+    private global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType restrictionType_ = global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified;
+    /// <summary>
+    /// Required. The type of restriction for using gcp services in the Workload environment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType RestrictionType {
+      get { return restrictionType_; }
+      set {
+        restrictionType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RestrictAllowedServicesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RestrictAllowedServicesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (RestrictionType != other.RestrictionType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (RestrictionType != global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified) hash ^= RestrictionType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (RestrictionType != global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RestrictionType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (RestrictionType != global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RestrictionType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (RestrictionType != global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RestrictionType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RestrictAllowedServicesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.RestrictionType != global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified) {
+        RestrictionType = other.RestrictionType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            RestrictionType = (global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            RestrictionType = (global::Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedServicesRequest.Types.RestrictionType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RestrictAllowedServicesRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of restriction.
+      /// </summary>
+      public enum RestrictionType {
+        /// <summary>
+        /// Unknown restriction type.
+        /// </summary>
+        [pbr::OriginalName("RESTRICTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Allow the use all services. This effectively remove all restrictions
+        /// placed on the Folder.
+        /// </summary>
+        [pbr::OriginalName("ALLOW_ALL_GCP_SERVICES")] AllowAllGcpServices = 1,
+        /// <summary>
+        /// Based on Workload's compliance regime, allowed list changes.
+        /// See - https://cloud.google.com/assured-workloads/docs/supported-products
+        /// for the list of allowed services.
+        /// </summary>
+        [pbr::OriginalName("ALLOW_COMPLIANT_SERVICES")] AllowCompliantServices = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Response for restricting the list of allowed services.
+  /// </summary>
+  public sealed partial class RestrictAllowedServicesResponse : pb::IMessage<RestrictAllowedServicesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RestrictAllowedServicesResponse> _parser = new pb::MessageParser<RestrictAllowedServicesResponse>(() => new RestrictAllowedServicesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RestrictAllowedServicesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestrictAllowedServicesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestrictAllowedServicesResponse(RestrictAllowedServicesResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestrictAllowedServicesResponse Clone() {
+      return new RestrictAllowedServicesResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RestrictAllowedServicesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RestrictAllowedServicesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RestrictAllowedServicesResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request for restricting list of available resources in Workload environment.
   /// </summary>
   public sealed partial class RestrictAllowedResourcesRequest : pb::IMessage<RestrictAllowedResourcesRequest>
@@ -744,7 +1174,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1013,7 +1443,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1168,7 +1598,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1406,7 +1836,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1589,8 +2019,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
   }
 
   /// <summary>
-  /// A request to analyze a hypothetical move of a source project or project-based
-  /// workload to a target (destination) folder-based workload.
+  /// Request to check if source workload can be moved to target workload.
   /// </summary>
   public sealed partial class AnalyzeWorkloadMoveRequest : pb::IMessage<AnalyzeWorkloadMoveRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1606,7 +2035,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1648,11 +2077,11 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     /// <summary>Field number for the "source" field.</summary>
     public const int SourceFieldNumber = 1;
     /// <summary>
-    /// The source type is a project-based workload. Specify the workloads's
-    /// relative resource name, formatted as:
-    /// "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
-    /// For example:
-    /// "organizations/123/locations/us-east1/workloads/assured-workload-1"
+    /// The Source is project based Workload to be moved. This is the workloads's
+    /// relative path in the API, formatted as
+    /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
+    /// For example,
+    /// "organizations/123/locations/us-east1/workloads/assured-workload-1".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1667,12 +2096,14 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     /// <summary>Field number for the "project" field.</summary>
     public const int ProjectFieldNumber = 3;
     /// <summary>
-    /// The source type is a project. Specify the project's relative resource
-    /// name, formatted as either a project number or a project ID:
-    /// "projects/{PROJECT_NUMBER}" or "projects/{PROJECT_ID}"
-    /// For example:
-    /// "projects/951040570662" when specifying a project number, or
-    /// "projects/my-project-123" when specifying a project ID.
+    /// The Source is a project based to be moved.
+    /// This is the project's relative path in the API, formatted as
+    /// "cloudresourcemanager.googleapis.com/projects/{project_number}"
+    /// "projects/{project_number}"
+    /// "cloudresourcemanager.googleapis.com/projects/{project_id}"
+    /// "projects/{project_id}"
+    /// For example,
+    /// "organizations/123/locations/us-east1/workloads/assured-workload-1".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1688,12 +2119,11 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     public const int TargetFieldNumber = 2;
     private string target_ = "";
     /// <summary>
-    /// Required. The resource ID of the folder-based destination workload. This workload is
-    /// where the source project will hypothetically be moved to. Specify the
-    /// workload's relative resource name, formatted as:
-    /// "organizations/{ORGANIZATION_ID}/locations/{LOCATION_ID}/workloads/{WORKLOAD_ID}"
-    /// For example:
-    /// "organizations/123/locations/us-east1/workloads/assured-workload-2"
+    /// Required. The resource name of the Workload to fetch. This is the workloads's
+    /// relative path in the API, formatted as
+    /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
+    /// For example,
+    /// "organizations/123/locations/us-east1/workloads/assured-workload-2".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1912,7 +2342,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
   }
 
   /// <summary>
-  /// A response that includes the analysis of the hypothetical resource move.
+  /// Response with the analysis if the source workload can be moved to the target
+  /// workload
   /// </summary>
   public sealed partial class AnalyzeWorkloadMoveResponse : pb::IMessage<AnalyzeWorkloadMoveResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1928,7 +2359,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1964,8 +2395,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> blockers_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of blockers that should be addressed before moving the source
-    /// project or project-based workload to the destination folder-based workload.
+    /// List of blockers that prevent moving the source workload to the target
+    /// workload
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2113,7 +2544,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2432,7 +2863,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2657,7 +3088,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2691,7 +3122,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       kajEnrollmentState_ = other.kajEnrollmentState_;
       enableSovereignControls_ = other.enableSovereignControls_;
       saaEnrollmentResponse_ = other.saaEnrollmentResponse_ != null ? other.saaEnrollmentResponse_.Clone() : null;
-      compliantButDisallowedServices_ = other.compliantButDisallowedServices_.Clone();
       switch (other.ComplianceRegimeSettingsCase) {
         case ComplianceRegimeSettingsOneofCase.Il4Settings:
           Il4Settings = other.Il4Settings.Clone();
@@ -2806,7 +3236,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     public const int BillingAccountFieldNumber = 6;
     private string billingAccount_ = "";
     /// <summary>
-    /// Output only. The billing account used for the resources which are
+    /// Input only. The billing account used for the resources which are
     /// direct children of workload. This billing account is initially associated
     /// with the resources created as part of Workload creation.
     /// After the initial creation of these resources, the customer can change
@@ -3022,23 +3452,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       }
     }
 
-    /// <summary>Field number for the "compliant_but_disallowed_services" field.</summary>
-    public const int CompliantButDisallowedServicesFieldNumber = 24;
-    private static readonly pb::FieldCodec<string> _repeated_compliantButDisallowedServices_codec
-        = pb::FieldCodec.ForString(194);
-    private readonly pbc::RepeatedField<string> compliantButDisallowedServices_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Output only. Urls for services which are compliant for this Assured Workload, but which
-    /// are currently disallowed by the ResourceUsageRestriction org policy.
-    /// Invoke RestrictAllowedResources endpoint to allow your project developers
-    /// to use these services in their environment."
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> CompliantButDisallowedServices {
-      get { return compliantButDisallowedServices_; }
-    }
-
     private object complianceRegimeSettings_;
     /// <summary>Enum of possible cases for the "compliance_regime_settings" oneof.</summary>
     public enum ComplianceRegimeSettingsOneofCase {
@@ -3095,7 +3508,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (KajEnrollmentState != other.KajEnrollmentState) return false;
       if (EnableSovereignControls != other.EnableSovereignControls) return false;
       if (!object.Equals(SaaEnrollmentResponse, other.SaaEnrollmentResponse)) return false;
-      if(!compliantButDisallowedServices_.Equals(other.compliantButDisallowedServices_)) return false;
       if (ComplianceRegimeSettingsCase != other.ComplianceRegimeSettingsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3122,7 +3534,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (KajEnrollmentState != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState.Unspecified) hash ^= KajEnrollmentState.GetHashCode();
       if (EnableSovereignControls != false) hash ^= EnableSovereignControls.GetHashCode();
       if (saaEnrollmentResponse_ != null) hash ^= SaaEnrollmentResponse.GetHashCode();
-      hash ^= compliantButDisallowedServices_.GetHashCode();
       hash ^= (int) complianceRegimeSettingsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3205,7 +3616,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(SaaEnrollmentResponse);
       }
-      compliantButDisallowedServices_.WriteTo(output, _repeated_compliantButDisallowedServices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3279,7 +3689,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(SaaEnrollmentResponse);
       }
-      compliantButDisallowedServices_.WriteTo(ref output, _repeated_compliantButDisallowedServices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3338,7 +3747,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (saaEnrollmentResponse_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SaaEnrollmentResponse);
       }
-      size += compliantButDisallowedServices_.CalculateSize(_repeated_compliantButDisallowedServices_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3396,7 +3804,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         }
         SaaEnrollmentResponse.MergeFrom(other.SaaEnrollmentResponse);
       }
-      compliantButDisallowedServices_.Add(other.compliantButDisallowedServices_);
       switch (other.ComplianceRegimeSettingsCase) {
         case ComplianceRegimeSettingsOneofCase.Il4Settings:
           if (Il4Settings == null) {
@@ -3540,10 +3947,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             input.ReadMessage(SaaEnrollmentResponse);
             break;
           }
-          case 194: {
-            compliantButDisallowedServices_.AddEntriesFrom(input, _repeated_compliantButDisallowedServices_codec);
-            break;
-          }
         }
       }
     #endif
@@ -3660,10 +4063,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             input.ReadMessage(SaaEnrollmentResponse);
             break;
           }
-          case 194: {
-            compliantButDisallowedServices_.AddEntriesFrom(ref input, _repeated_compliantButDisallowedServices_codec);
-            break;
-          }
         }
       }
     }
@@ -3722,10 +4121,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         /// International Traffic in Arms Regulations
         /// </summary>
         [pbr::OriginalName("ITAR")] Itar = 10,
-        /// <summary>
-        /// Assured Workloads for Australia Regions and Support controls
-        /// </summary>
-        [pbr::OriginalName("AU_REGIONS_AND_US_SUPPORT")] AuRegionsAndUsSupport = 11,
       }
 
       /// <summary>
@@ -5699,7 +6094,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.AssuredworkloadsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -340,9 +340,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all contexts from.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -369,9 +369,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all contexts from.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -398,9 +398,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all contexts from.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -427,9 +427,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to list all contexts from.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -483,9 +483,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -502,9 +502,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -521,9 +521,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -537,9 +537,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -556,9 +556,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -575,9 +575,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -626,9 +626,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -651,9 +651,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -676,9 +676,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -697,9 +697,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -722,9 +722,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -747,9 +747,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The session to create a context for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or
-        /// `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+        /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -870,9 +870,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context to delete. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -889,9 +889,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context to delete. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -908,9 +908,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context to delete. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -924,9 +924,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context to delete. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -943,9 +943,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context to delete. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -962,9 +962,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the context to delete. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User
-        /// ID&gt;/sessions/&lt;Session ID&gt;/contexts/&lt;Context ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+        /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
+        /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;/contexts/&amp;lt;Context ID&amp;gt;`.
         /// If `Environment ID` is not specified, we assume default 'draft'
         /// environment. If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1005,9 +1005,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the session to delete all contexts from. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or `projects/&lt;Project
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
-        /// ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}` or `projects/{Project
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
+        /// ID&amp;gt;`.
         /// If `Environment ID` is not specified we assume default 'draft' environment.
         /// If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1024,9 +1024,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the session to delete all contexts from. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or `projects/&lt;Project
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
-        /// ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}` or `projects/{Project
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
+        /// ID&amp;gt;`.
         /// If `Environment ID` is not specified we assume default 'draft' environment.
         /// If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1043,9 +1043,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the session to delete all contexts from. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or `projects/&lt;Project
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
-        /// ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}` or `projects/{Project
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
+        /// ID&amp;gt;`.
         /// If `Environment ID` is not specified we assume default 'draft' environment.
         /// If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1059,9 +1059,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the session to delete all contexts from. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or `projects/&lt;Project
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
-        /// ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}` or `projects/{Project
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
+        /// ID&amp;gt;`.
         /// If `Environment ID` is not specified we assume default 'draft' environment.
         /// If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1078,9 +1078,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the session to delete all contexts from. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or `projects/&lt;Project
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
-        /// ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}` or `projects/{Project
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
+        /// ID&amp;gt;`.
         /// If `Environment ID` is not specified we assume default 'draft' environment.
         /// If `User ID` is not specified, we assume default '-' user.
         /// </param>
@@ -1097,9 +1097,9 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the session to delete all contexts from. Format:
-        /// `projects/&lt;Project ID&gt;/agent/sessions/&lt;Session ID&gt;` or `projects/&lt;Project
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;/users/&lt;User ID&gt;/sessions/&lt;Session
-        /// ID&gt;`.
+        /// `projects/{Project ID}/agent/sessions/{Session ID}` or `projects/{Project
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;/users/&amp;lt;User ID&amp;gt;/sessions/&amp;lt;Session
+        /// ID&amp;gt;`.
         /// If `Environment ID` is not specified we assume default 'draft' environment.
         /// If `User ID` is not specified, we assume default '-' user.
         /// </param>

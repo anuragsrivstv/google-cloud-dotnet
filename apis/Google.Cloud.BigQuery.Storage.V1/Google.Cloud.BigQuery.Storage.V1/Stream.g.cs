@@ -30,7 +30,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "LnByb3RvGixnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hcnJv",
             "dy5wcm90bxorZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvYXZy",
             "by5wcm90bxosZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvdGFi",
-            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iogkK",
+            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iuwgK",
             "C1JlYWRTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBAxI0CgtleHBpcmVfdGlt",
             "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJGCgtk",
             "YXRhX2Zvcm1hdBgDIAEoDjIsLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
@@ -47,49 +47,45 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "LnN0b3JhZ2UudjEuUmVhZFN0cmVhbUID4EEDEioKHWVzdGltYXRlZF90b3Rh",
             "bF9ieXRlc19zY2FubmVkGAwgASgDQgPgQQMSFQoIdHJhY2VfaWQYDSABKAlC",
             "A+BBARpDCg5UYWJsZU1vZGlmaWVycxIxCg1zbmFwc2hvdF90aW1lGAEgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBq7AgoQVGFibGVSZWFkT3B0",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBrUAQoQVGFibGVSZWFkT3B0",
             "aW9ucxIXCg9zZWxlY3RlZF9maWVsZHMYASADKAkSFwoPcm93X3Jlc3RyaWN0",
             "aW9uGAIgASgJEmcKG2Fycm93X3NlcmlhbGl6YXRpb25fb3B0aW9ucxgDIAEo",
             "CzI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkFycm93U2Vy",
-            "aWFsaXphdGlvbk9wdGlvbnNCA+BBAUgAEmUKGmF2cm9fc2VyaWFsaXphdGlv",
-            "bl9vcHRpb25zGAQgASgLMjouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3Jh",
-            "Z2UudjEuQXZyb1NlcmlhbGl6YXRpb25PcHRpb25zQgPgQQFIAEIlCiNvdXRw",
-            "dXRfZm9ybWF0X3NlcmlhbGl6YXRpb25fb3B0aW9uczpr6kFoCipiaWdxdWVy",
-            "eXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFNlc3Npb24SOnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXNzaW9ucy97c2Vz",
-            "c2lvbn1CCAoGc2NoZW1hIpwBCgpSZWFkU3RyZWFtEhEKBG5hbWUYASABKAlC",
-            "A+BBAzp76kF4CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVh",
-            "ZFN0cmVhbRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3Nlc3Npb25zL3tzZXNzaW9ufS9zdHJlYW1zL3tzdHJlYW19IvsECgtX",
-            "cml0ZVN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQMSRQoEdHlwZRgCIAEoDjIy",
-            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldyaXRlU3RyZWFt",
-            "LlR5cGVCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtjb21taXRfdGltZRgEIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJICgx0YWJsZV9zY2hlbWEY",
-            "BSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5UYWJs",
-            "ZVNjaGVtYUID4EEDElAKCndyaXRlX21vZGUYByABKA4yNy5nb29nbGUuY2xv",
-            "dWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVhbS5Xcml0ZU1vZGVC",
-            "A+BBBRIVCghsb2NhdGlvbhgIIAEoCUID4EEFIkYKBFR5cGUSFAoQVFlQRV9V",
-            "TlNQRUNJRklFRBAAEg0KCUNPTU1JVFRFRBABEgsKB1BFTkRJTkcQAhIMCghC",
-            "VUZGRVJFRBADIjMKCVdyaXRlTW9kZRIaChZXUklURV9NT0RFX1VOU1BFQ0lG",
-            "SUVEEAASCgoGSU5TRVJUEAE6dupBcwoqYmlncXVlcnlzdG9yYWdlLmdvb2ds",
-            "ZWFwaXMuY29tL1dyaXRlU3RyZWFtEkVwcm9qZWN0cy97cHJvamVjdH0vZGF0",
-            "YXNldHMve2RhdGFzZXR9L3RhYmxlcy97dGFibGV9L3N0cmVhbXMve3N0cmVh",
-            "bX0qPgoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9VTlNQRUNJRklFRBAA",
-            "EggKBEFWUk8QARIJCgVBUlJPVxACKkkKD1dyaXRlU3RyZWFtVmlldxIhCh1X",
-            "UklURV9TVFJFQU1fVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoE",
-            "RlVMTBACQsQBCiRjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2Uu",
-            "djFCC1N0cmVhbVByb3RvUAFaR2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MTtzdG9yYWdl",
-            "qgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3JhZ2UuVjHKAiBHb29nbGVc",
-            "Q2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJvdG8z"));
+            "aWFsaXphdGlvbk9wdGlvbnNCA+BBAUgAQiUKI291dHB1dF9mb3JtYXRfc2Vy",
+            "aWFsaXphdGlvbl9vcHRpb25zOmvqQWgKKmJpZ3F1ZXJ5c3RvcmFnZS5nb29n",
+            "bGVhcGlzLmNvbS9SZWFkU2Vzc2lvbhI6cHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3Nlc3Npb25zL3tzZXNzaW9ufUIICgZzY2hl",
+            "bWEinAEKClJlYWRTdHJlYW0SEQoEbmFtZRgBIAEoCUID4EEDOnvqQXgKKWJp",
+            "Z3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9SZWFkU3RyZWFtEktwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2Vzc2lvbnMv",
+            "e3Nlc3Npb259L3N0cmVhbXMve3N0cmVhbX0i5AQKC1dyaXRlU3RyZWFtEhEK",
+            "BG5hbWUYASABKAlCA+BBAxJFCgR0eXBlGAIgASgOMjIuZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuV3JpdGVTdHJlYW0uVHlwZUID4EEFEjQK",
+            "C2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDEjQKC2NvbW1pdF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDEkgKDHRhYmxlX3NjaGVtYRgFIAEoCzItLmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLlRhYmxlU2NoZW1hQgPgQQMS",
+            "UAoKd3JpdGVfbW9kZRgHIAEoDjI3Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5z",
+            "dG9yYWdlLnYxLldyaXRlU3RyZWFtLldyaXRlTW9kZUID4EEFIkYKBFR5cGUS",
+            "FAoQVFlQRV9VTlNQRUNJRklFRBAAEg0KCUNPTU1JVFRFRBABEgsKB1BFTkRJ",
+            "TkcQAhIMCghCVUZGRVJFRBADIjMKCVdyaXRlTW9kZRIaChZXUklURV9NT0RF",
+            "X1VOU1BFQ0lGSUVEEAASCgoGSU5TRVJUEAE6dupBcwoqYmlncXVlcnlzdG9y",
+            "YWdlLmdvb2dsZWFwaXMuY29tL1dyaXRlU3RyZWFtEkVwcm9qZWN0cy97cHJv",
+            "amVjdH0vZGF0YXNldHMve2RhdGFzZXR9L3RhYmxlcy97dGFibGV9L3N0cmVh",
+            "bXMve3N0cmVhbX0qPgoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9VTlNQ",
+            "RUNJRklFRBAAEggKBEFWUk8QARIJCgVBUlJPVxACQsQBCiRjb20uZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjFCC1N0cmVhbVByb3RvUAFaR2dv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmln",
+            "cXVlcnkvc3RvcmFnZS92MTtzdG9yYWdlqgIgR29vZ2xlLkNsb3VkLkJpZ1F1",
+            "ZXJ5LlN0b3JhZ2UuVjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFn",
+            "ZVxWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.TableReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStreamView), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams", "EstimatedTotalBytesScanned", "TraceId" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions", "AvroSerializationOptions" }, new[]{ "OutputFormatSerializationOptions" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions" }, new[]{ "OutputFormatSerializationOptions" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream), global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser, new[]{ "Name", "Type", "CreateTime", "CommitTime", "TableSchema", "WriteMode", "Location" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream), global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser, new[]{ "Name", "Type", "CreateTime", "CommitTime", "TableSchema", "WriteMode" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) }, null, null)
           }));
     }
     #endregion
@@ -114,29 +110,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// See https://arrow.apache.org/ for more details.
     /// </summary>
     [pbr::OriginalName("ARROW")] Arrow = 2,
-  }
-
-  /// <summary>
-  /// WriteStreamView is a view enum that controls what details about a write
-  /// stream should be returned.
-  /// </summary>
-  public enum WriteStreamView {
-    /// <summary>
-    /// The default / unset value.
-    /// </summary>
-    [pbr::OriginalName("WRITE_STREAM_VIEW_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// The BASIC projection returns basic metadata about a write stream.  The
-    /// basic view does not include schema information.  This is the default view
-    /// returned by GetWriteStream.
-    /// </summary>
-    [pbr::OriginalName("BASIC")] Basic = 1,
-    /// <summary>
-    /// The FULL projection returns all available write stream metadata, including
-    /// the schema.  CreateWriteStream returns the full projection of write stream
-    /// metadata.
-    /// </summary>
-    [pbr::OriginalName("FULL")] Full = 2,
   }
 
   #endregion
@@ -1078,9 +1051,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             case OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions:
               ArrowSerializationOptions = other.ArrowSerializationOptions.Clone();
               break;
-            case OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions:
-              AvroSerializationOptions = other.AvroSerializationOptions.Clone();
-              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1098,53 +1068,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> selectedFields_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. The names of the fields in the table to be returned. If no
-        /// field names are specified, then all fields in the table are returned.
-        ///
-        /// Nested fields -- the child elements of a STRUCT field -- can be selected
-        /// individually using their fully-qualified names, and will be returned as
-        /// record fields containing only the selected nested fields. If a STRUCT
-        /// field is specified in the selected fields list, all of the child elements
-        /// will be returned.
-        ///
-        /// As an example, consider a table with the following schema:
-        ///
-        ///   {
-        ///       "name": "struct_field",
-        ///       "type": "RECORD",
-        ///       "mode": "NULLABLE",
-        ///       "fields": [
-        ///           {
-        ///               "name": "string_field1",
-        ///               "type": "STRING",
-        /// .              "mode": "NULLABLE"
-        ///           },
-        ///           {
-        ///               "name": "string_field2",
-        ///               "type": "STRING",
-        ///               "mode": "NULLABLE"
-        ///           }
-        ///       ]
-        ///   }
-        ///
-        /// Specifying "struct_field" in the selected fields list will result in a
-        /// read session schema with the following logical structure:
-        ///
-        ///   struct_field {
-        ///       string_field1
-        ///       string_field2
-        ///   }
-        ///
-        /// Specifying "struct_field.string_field1" in the selected fields list will
-        /// result in a read session schema with the following logical structure:
-        ///
-        ///   struct_field {
-        ///       string_field1
-        ///   }
-        ///
-        /// The order of the fields in the read session schema is derived from the
-        /// table schema and does not correspond to the order in which the fields are
-        /// specified in this list.
+        /// Names of the fields in the table that should be read. If empty, all
+        /// fields will be read. If the specified field is a nested field, all
+        /// the sub-fields in the field will be selected. The output field order is
+        /// unrelated to the order of fields in selected_fields.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1191,27 +1118,11 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
 
-        /// <summary>Field number for the "avro_serialization_options" field.</summary>
-        public const int AvroSerializationOptionsFieldNumber = 4;
-        /// <summary>
-        /// Optional. Options specific to the Apache Avro output format
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions AvroSerializationOptions {
-          get { return outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions ? (global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions) outputFormatSerializationOptions_ : null; }
-          set {
-            outputFormatSerializationOptions_ = value;
-            outputFormatSerializationOptionsCase_ = value == null ? OutputFormatSerializationOptionsOneofCase.None : OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions;
-          }
-        }
-
         private object outputFormatSerializationOptions_;
         /// <summary>Enum of possible cases for the "output_format_serialization_options" oneof.</summary>
         public enum OutputFormatSerializationOptionsOneofCase {
           None = 0,
           ArrowSerializationOptions = 3,
-          AvroSerializationOptions = 4,
         }
         private OutputFormatSerializationOptionsOneofCase outputFormatSerializationOptionsCase_ = OutputFormatSerializationOptionsOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1245,7 +1156,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if(!selectedFields_.Equals(other.selectedFields_)) return false;
           if (RowRestriction != other.RowRestriction) return false;
           if (!object.Equals(ArrowSerializationOptions, other.ArrowSerializationOptions)) return false;
-          if (!object.Equals(AvroSerializationOptions, other.AvroSerializationOptions)) return false;
           if (OutputFormatSerializationOptionsCase != other.OutputFormatSerializationOptionsCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1257,7 +1167,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           hash ^= selectedFields_.GetHashCode();
           if (RowRestriction.Length != 0) hash ^= RowRestriction.GetHashCode();
           if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) hash ^= ArrowSerializationOptions.GetHashCode();
-          if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) hash ^= AvroSerializationOptions.GetHashCode();
           hash ^= (int) outputFormatSerializationOptionsCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1286,10 +1195,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(ArrowSerializationOptions);
           }
-          if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) {
-            output.WriteRawTag(34);
-            output.WriteMessage(AvroSerializationOptions);
-          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1309,10 +1214,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             output.WriteRawTag(26);
             output.WriteMessage(ArrowSerializationOptions);
           }
-          if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) {
-            output.WriteRawTag(34);
-            output.WriteMessage(AvroSerializationOptions);
-          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1329,9 +1230,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArrowSerializationOptions);
-          }
-          if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AvroSerializationOptions);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1355,12 +1253,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
                 ArrowSerializationOptions = new global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions();
               }
               ArrowSerializationOptions.MergeFrom(other.ArrowSerializationOptions);
-              break;
-            case OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions:
-              if (AvroSerializationOptions == null) {
-                AvroSerializationOptions = new global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions();
-              }
-              AvroSerializationOptions.MergeFrom(other.AvroSerializationOptions);
               break;
           }
 
@@ -1396,15 +1288,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
                 ArrowSerializationOptions = subBuilder;
                 break;
               }
-              case 34: {
-                global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions();
-                if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) {
-                  subBuilder.MergeFrom(AvroSerializationOptions);
-                }
-                input.ReadMessage(subBuilder);
-                AvroSerializationOptions = subBuilder;
-                break;
-              }
             }
           }
         #endif
@@ -1435,15 +1318,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 ArrowSerializationOptions = subBuilder;
-                break;
-              }
-              case 34: {
-                global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.AvroSerializationOptions();
-                if (outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.AvroSerializationOptions) {
-                  subBuilder.MergeFrom(AvroSerializationOptions);
-                }
-                input.ReadMessage(subBuilder);
-                AvroSerializationOptions = subBuilder;
                 break;
               }
             }
@@ -1699,7 +1573,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       commitTime_ = other.commitTime_ != null ? other.commitTime_.Clone() : null;
       tableSchema_ = other.tableSchema_ != null ? other.tableSchema_.Clone() : null;
       writeMode_ = other.writeMode_;
-      location_ = other.location_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1807,23 +1680,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
-    /// <summary>Field number for the "location" field.</summary>
-    public const int LocationFieldNumber = 8;
-    private string location_ = "";
-    /// <summary>
-    /// Immutable. The geographic location where the stream's dataset resides. See
-    /// https://cloud.google.com/bigquery/docs/locations for supported
-    /// locations.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Location {
-      get { return location_; }
-      set {
-        location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1845,7 +1701,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (!object.Equals(CommitTime, other.CommitTime)) return false;
       if (!object.Equals(TableSchema, other.TableSchema)) return false;
       if (WriteMode != other.WriteMode) return false;
-      if (Location != other.Location) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1859,7 +1714,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (commitTime_ != null) hash ^= CommitTime.GetHashCode();
       if (tableSchema_ != null) hash ^= TableSchema.GetHashCode();
       if (WriteMode != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified) hash ^= WriteMode.GetHashCode();
-      if (Location.Length != 0) hash ^= Location.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1902,10 +1756,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) WriteMode);
       }
-      if (Location.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(Location);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1940,10 +1790,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(56);
         output.WriteEnum((int) WriteMode);
       }
-      if (Location.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(Location);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1971,9 +1817,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (WriteMode != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WriteMode);
-      }
-      if (Location.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2013,9 +1856,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (other.WriteMode != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified) {
         WriteMode = other.WriteMode;
-      }
-      if (other.Location.Length != 0) {
-        Location = other.Location;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2065,10 +1905,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             WriteMode = (global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) input.ReadEnum();
             break;
           }
-          case 66: {
-            Location = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -2115,10 +1951,6 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
           case 56: {
             WriteMode = (global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) input.ReadEnum();
-            break;
-          }
-          case 66: {
-            Location = input.ReadString();
             break;
           }
         }
