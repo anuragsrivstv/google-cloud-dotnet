@@ -398,13 +398,13 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
         /// 
         /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
         /// Note: training phrases of the intents will not be returned for non-draft
         /// environment.
         /// </param>
@@ -431,13 +431,13 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
         /// 
         /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
         /// Note: training phrases of the intents will not be returned for non-draft
         /// environment.
         /// </param>
@@ -464,13 +464,13 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
         /// 
         /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
         /// Note: training phrases of the intents will not be returned for non-draft
         /// environment.
         /// </param>
@@ -497,13 +497,13 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
         /// 
         /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
         /// Note: training phrases of the intents will not be returned for non-draft
         /// environment.
         /// </param>
@@ -530,13 +530,13 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
         /// 
         /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
         /// Note: training phrases of the intents will not be returned for non-draft
         /// environment.
         /// </param>
@@ -571,13 +571,13 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
         /// 
         /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
         /// Note: training phrases of the intents will not be returned for non-draft
         /// environment.
         /// </param>
@@ -612,13 +612,13 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
         /// 
         /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
         /// Note: training phrases of the intents will not be returned for non-draft
         /// environment.
         /// </param>
@@ -653,13 +653,13 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to list all intents from.
-        /// Format: `projects/&lt;Project ID&gt;/agent` or `projects/&lt;Project
-        /// ID&gt;/locations/&lt;Location ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent` or `projects/{Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agent`.
         /// 
         /// Alternatively, you can specify the environment to list intents for.
-        /// Format: `projects/&lt;Project ID&gt;/agent/environments/&lt;Environment ID&gt;`
-        /// or `projects/&lt;Project ID&gt;/locations/&lt;Location
-        /// ID&gt;/agent/environments/&lt;Environment ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`
+        /// or `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/agent/environments/&amp;lt;Environment ID&amp;gt;`.
         /// Note: training phrases of the intents will not be returned for non-draft
         /// environment.
         /// </param>
@@ -721,7 +721,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -736,7 +736,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -751,7 +751,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -763,7 +763,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -778,7 +778,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -793,7 +793,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -805,7 +805,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -828,7 +828,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -851,7 +851,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -870,7 +870,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -893,7 +893,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -916,7 +916,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="name">
         /// Required. The name of the intent.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="languageCode">
         /// Optional. The language used to access language-specific data.
@@ -978,7 +978,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1024,7 +1024,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1066,7 +1066,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1089,7 +1089,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1108,7 +1108,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1170,7 +1170,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1196,7 +1196,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1227,7 +1227,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1258,7 +1258,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The agent to create a intent for.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intent">
         /// Required. The intent to create.
@@ -1522,7 +1522,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the intent to delete. If this intent has direct or
         /// indirect followup intents, we also delete them.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1542,7 +1542,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the intent to delete. If this intent has direct or
         /// indirect followup intents, we also delete them.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1562,7 +1562,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the intent to delete. If this intent has direct or
         /// indirect followup intents, we also delete them.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1579,7 +1579,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the intent to delete. If this intent has direct or
         /// indirect followup intents, we also delete them.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1599,7 +1599,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the intent to delete. If this intent has direct or
         /// indirect followup intents, we also delete them.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1619,7 +1619,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <param name="name">
         /// Required. The name of the intent to delete. If this intent has direct or
         /// indirect followup intents, we also delete them.
-        /// Format: `projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1733,7 +1733,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchUri">
         /// The URI to a Google Cloud Storage file containing intents to update or
@@ -1766,7 +1766,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchUri">
         /// The URI to a Google Cloud Storage file containing intents to update or
@@ -1799,7 +1799,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchUri">
         /// The URI to a Google Cloud Storage file containing intents to update or
@@ -1828,7 +1828,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchUri">
         /// The URI to a Google Cloud Storage file containing intents to update or
@@ -1861,7 +1861,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchUri">
         /// The URI to a Google Cloud Storage file containing intents to update or
@@ -1894,7 +1894,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchUri">
         /// The URI to a Google Cloud Storage file containing intents to update or
@@ -1923,7 +1923,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchInline">
         /// The collection of intents to update or create.
@@ -1954,7 +1954,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchInline">
         /// The collection of intents to update or create.
@@ -1985,7 +1985,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchInline">
         /// The collection of intents to update or create.
@@ -2012,7 +2012,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchInline">
         /// The collection of intents to update or create.
@@ -2043,7 +2043,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchInline">
         /// The collection of intents to update or create.
@@ -2074,7 +2074,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to update or create intents in.
-        /// Format: `projects/&lt;Project ID&gt;/agent`.
+        /// Format: `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intentBatchInline">
         /// The collection of intents to update or create.
@@ -2195,7 +2195,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/&lt;Project ID&gt;/agent`.
+        /// `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intents">
         /// Required. The collection of intents to delete. Only intent `name` must be
@@ -2231,7 +2231,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/&lt;Project ID&gt;/agent`.
+        /// `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intents">
         /// Required. The collection of intents to delete. Only intent `name` must be
@@ -2267,7 +2267,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/&lt;Project ID&gt;/agent`.
+        /// `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intents">
         /// Required. The collection of intents to delete. Only intent `name` must be
@@ -2296,7 +2296,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/&lt;Project ID&gt;/agent`.
+        /// `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intents">
         /// Required. The collection of intents to delete. Only intent `name` must be
@@ -2332,7 +2332,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/&lt;Project ID&gt;/agent`.
+        /// `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intents">
         /// Required. The collection of intents to delete. Only intent `name` must be
@@ -2368,7 +2368,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the agent to delete all entities types for. Format:
-        /// `projects/&lt;Project ID&gt;/agent`.
+        /// `projects/{Project ID}/agent`.
         /// </param>
         /// <param name="intents">
         /// Required. The collection of intents to delete. Only intent `name` must be

@@ -17,9 +17,7 @@
 namespace Google.Cloud.DocumentAI.V1.Snippets
 {
     // [START documentai_v1_generated_DocumentProcessorService_ProcessDocument_sync]
-    using Google.Api.Gax;
     using Google.Cloud.DocumentAI.V1;
-    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDocumentProcessorServiceClientSnippets
     {
@@ -35,10 +33,9 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
             // Initialize request argument(s)
             ProcessRequest request = new ProcessRequest
             {
-                ResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                ProcessorName = ProcessorName.FromProjectLocationProcessor("[PROJECT]", "[LOCATION]", "[PROCESSOR]"),
                 SkipHumanReview = false,
                 InlineDocument = new Document(),
-                FieldMask = new FieldMask(),
             };
             // Make the request
             ProcessResponse response = documentProcessorServiceClient.ProcessDocument(request);

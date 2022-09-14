@@ -64,7 +64,6 @@ namespace Google.Cloud.Asset.V1
             AnalyzeIamPolicyLongrunningSettings = existing.AnalyzeIamPolicyLongrunningSettings;
             AnalyzeIamPolicyLongrunningOperationsSettings = existing.AnalyzeIamPolicyLongrunningOperationsSettings.Clone();
             AnalyzeMoveSettings = existing.AnalyzeMoveSettings;
-            QueryAssetsSettings = existing.QueryAssetsSettings;
             CreateSavedQuerySettings = existing.CreateSavedQuerySettings;
             GetSavedQuerySettings = existing.GetSavedQuerySettings;
             ListSavedQueriesSettings = existing.ListSavedQueriesSettings;
@@ -334,24 +333,6 @@ namespace Google.Cloud.Asset.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AssetServiceClient.QueryAssets</c> and <c>AssetServiceClient.QueryAssetsAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
-        /// </item>
-        /// <item><description>Timeout: 200 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings QueryAssetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(200000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>AssetServiceClient.CreateSavedQuery</c> and <c>AssetServiceClient.CreateSavedQueryAsync</c>.
         /// </summary>
         /// <remarks>
@@ -417,17 +398,11 @@ namespace Google.Cloud.Asset.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item>
-        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
-        /// </item>
-        /// <item><description>Timeout: 300 seconds.</description></item>
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings BatchGetEffectiveIamPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings BatchGetEffectiveIamPoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AssetServiceSettings"/> object.</returns>
@@ -1380,22 +1355,14 @@ namespace Google.Cloud.Asset.V1
         /// * `labels.env:*` to find Cloud resources that have a label "env".
         /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
         /// encryption key whose name contains the word "key".
-        /// * `relationships:instance-group-1` to find Cloud resources that have
-        /// relationships with "instance-group-1" in the related resource name.
-        /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that
-        /// have relationships of type "INSTANCE_TO_INSTANCEGROUP".
-        /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-        /// compute instances that have relationships with "instance-group-1" in the
-        /// compute instance group resource name, for relationship type
-        /// "INSTANCE_TO_INSTANCEGROUP".
         /// * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a
         /// word.
         /// * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain
         /// "ACTIVE" as a word.
-        /// * `createTime&lt;1609459200` to find Cloud resources that were created before
+        /// * `createTime&amp;lt;1609459200` to find Cloud resources that were created before
         /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
         /// "2021-01-01 00:00:00 UTC" in seconds.
-        /// * `updateTime&gt;1609459200` to find Cloud resources that were updated after
+        /// * `updateTime&amp;gt;1609459200` to find Cloud resources that were updated after
         /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
         /// "2021-01-01 00:00:00 UTC" in seconds.
         /// * `Important` to find Cloud resources that contain "Important" as a word
@@ -1489,22 +1456,14 @@ namespace Google.Cloud.Asset.V1
         /// * `labels.env:*` to find Cloud resources that have a label "env".
         /// * `kmsKey:key` to find Cloud resources encrypted with a customer-managed
         /// encryption key whose name contains the word "key".
-        /// * `relationships:instance-group-1` to find Cloud resources that have
-        /// relationships with "instance-group-1" in the related resource name.
-        /// * `relationships:INSTANCE_TO_INSTANCEGROUP` to find compute instances that
-        /// have relationships of type "INSTANCE_TO_INSTANCEGROUP".
-        /// * `relationships.INSTANCE_TO_INSTANCEGROUP:instance-group-1` to find
-        /// compute instances that have relationships with "instance-group-1" in the
-        /// compute instance group resource name, for relationship type
-        /// "INSTANCE_TO_INSTANCEGROUP".
         /// * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a
         /// word.
         /// * `NOT state:ACTIVE` to find Cloud resources whose state doesn't contain
         /// "ACTIVE" as a word.
-        /// * `createTime&lt;1609459200` to find Cloud resources that were created before
+        /// * `createTime&amp;lt;1609459200` to find Cloud resources that were created before
         /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
         /// "2021-01-01 00:00:00 UTC" in seconds.
-        /// * `updateTime&gt;1609459200` to find Cloud resources that were updated after
+        /// * `updateTime&amp;gt;1609459200` to find Cloud resources that were updated after
         /// "2021-01-01 00:00:00 UTC". 1609459200 is the epoch timestamp of
         /// "2021-01-01 00:00:00 UTC" in seconds.
         /// * `Important` to find Cloud resources that contain "Important" as a word
@@ -1607,8 +1566,8 @@ namespace Google.Cloud.Asset.V1
         /// compared against each Cloud IAM policy binding, including its principals,
         /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
         /// contain the bindings that match your query. To learn more about the IAM
-        /// policy structure, see the [IAM policy
-        /// documentation](https://cloud.google.com/iam/help/allow-policies/structure).
+        /// policy structure, see [IAM policy
+        /// doc](https://cloud.google.com/iam/docs/policies#structure).
         /// 
         /// Examples:
         /// 
@@ -1690,8 +1649,8 @@ namespace Google.Cloud.Asset.V1
         /// compared against each Cloud IAM policy binding, including its principals,
         /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
         /// contain the bindings that match your query. To learn more about the IAM
-        /// policy structure, see the [IAM policy
-        /// documentation](https://cloud.google.com/iam/help/allow-policies/structure).
+        /// policy structure, see [IAM policy
+        /// doc](https://cloud.google.com/iam/docs/policies#structure).
         /// 
         /// Examples:
         /// 
@@ -1894,72 +1853,6 @@ namespace Google.Cloud.Asset.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<AnalyzeMoveResponse> AnalyzeMoveAsync(AnalyzeMoveRequest request, st::CancellationToken cancellationToken) =>
             AnalyzeMoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
-        /// 
-        /// If the query execution finishes within timeout and there's no pagination,
-        /// the full query results will be returned in the `QueryAssetsResponse`.
-        /// 
-        /// Otherwise, full query results can be obtained by issuing extra requests
-        /// with the `job_reference` from the a previous `QueryAssets` call.
-        /// 
-        /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual QueryAssetsResponse QueryAssets(QueryAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
-        /// 
-        /// If the query execution finishes within timeout and there's no pagination,
-        /// the full query results will be returned in the `QueryAssetsResponse`.
-        /// 
-        /// Otherwise, full query results can be obtained by issuing extra requests
-        /// with the `job_reference` from the a previous `QueryAssets` call.
-        /// 
-        /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<QueryAssetsResponse> QueryAssetsAsync(QueryAssetsRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
-        /// 
-        /// If the query execution finishes within timeout and there's no pagination,
-        /// the full query results will be returned in the `QueryAssetsResponse`.
-        /// 
-        /// Otherwise, full query results can be obtained by issuing extra requests
-        /// with the `job_reference` from the a previous `QueryAssets` call.
-        /// 
-        /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<QueryAssetsResponse> QueryAssetsAsync(QueryAssetsRequest request, st::CancellationToken cancellationToken) =>
-            QueryAssetsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a saved query in a parent project/folder/organization.
@@ -3036,8 +2929,6 @@ namespace Google.Cloud.Asset.V1
 
         private readonly gaxgrpc::ApiCall<AnalyzeMoveRequest, AnalyzeMoveResponse> _callAnalyzeMove;
 
-        private readonly gaxgrpc::ApiCall<QueryAssetsRequest, QueryAssetsResponse> _callQueryAssets;
-
         private readonly gaxgrpc::ApiCall<CreateSavedQueryRequest, SavedQuery> _callCreateSavedQuery;
 
         private readonly gaxgrpc::ApiCall<GetSavedQueryRequest, SavedQuery> _callGetSavedQuery;
@@ -3102,9 +2993,6 @@ namespace Google.Cloud.Asset.V1
             _callAnalyzeMove = clientHelper.BuildApiCall<AnalyzeMoveRequest, AnalyzeMoveResponse>("AnalyzeMove", grpcClient.AnalyzeMoveAsync, grpcClient.AnalyzeMove, effectiveSettings.AnalyzeMoveSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callAnalyzeMove);
             Modify_AnalyzeMoveApiCall(ref _callAnalyzeMove);
-            _callQueryAssets = clientHelper.BuildApiCall<QueryAssetsRequest, QueryAssetsResponse>("QueryAssets", grpcClient.QueryAssetsAsync, grpcClient.QueryAssets, effectiveSettings.QueryAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callQueryAssets);
-            Modify_QueryAssetsApiCall(ref _callQueryAssets);
             _callCreateSavedQuery = clientHelper.BuildApiCall<CreateSavedQueryRequest, SavedQuery>("CreateSavedQuery", grpcClient.CreateSavedQueryAsync, grpcClient.CreateSavedQuery, effectiveSettings.CreateSavedQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSavedQuery);
             Modify_CreateSavedQueryApiCall(ref _callCreateSavedQuery);
@@ -3154,8 +3042,6 @@ namespace Google.Cloud.Asset.V1
 
         partial void Modify_AnalyzeMoveApiCall(ref gaxgrpc::ApiCall<AnalyzeMoveRequest, AnalyzeMoveResponse> call);
 
-        partial void Modify_QueryAssetsApiCall(ref gaxgrpc::ApiCall<QueryAssetsRequest, QueryAssetsResponse> call);
-
         partial void Modify_CreateSavedQueryApiCall(ref gaxgrpc::ApiCall<CreateSavedQueryRequest, SavedQuery> call);
 
         partial void Modify_GetSavedQueryApiCall(ref gaxgrpc::ApiCall<GetSavedQueryRequest, SavedQuery> call);
@@ -3198,8 +3084,6 @@ namespace Google.Cloud.Asset.V1
         partial void Modify_AnalyzeIamPolicyLongrunningRequest(ref AnalyzeIamPolicyLongrunningRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AnalyzeMoveRequest(ref AnalyzeMoveRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_QueryAssetsRequest(ref QueryAssetsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateSavedQueryRequest(ref CreateSavedQueryRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3605,56 +3489,6 @@ namespace Google.Cloud.Asset.V1
         {
             Modify_AnalyzeMoveRequest(ref request, ref callSettings);
             return _callAnalyzeMove.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
-        /// 
-        /// If the query execution finishes within timeout and there's no pagination,
-        /// the full query results will be returned in the `QueryAssetsResponse`.
-        /// 
-        /// Otherwise, full query results can be obtained by issuing extra requests
-        /// with the `job_reference` from the a previous `QueryAssets` call.
-        /// 
-        /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override QueryAssetsResponse QueryAssets(QueryAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_QueryAssetsRequest(ref request, ref callSettings);
-            return _callQueryAssets.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Issue a job that queries assets using a SQL statement compatible with
-        /// [BigQuery Standard
-        /// SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql).
-        /// 
-        /// If the query execution finishes within timeout and there's no pagination,
-        /// the full query results will be returned in the `QueryAssetsResponse`.
-        /// 
-        /// Otherwise, full query results can be obtained by issuing extra requests
-        /// with the `job_reference` from the a previous `QueryAssets` call.
-        /// 
-        /// Note, the query result has approximately 10 GB limitation enforced by
-        /// BigQuery
-        /// https://cloud.google.com/bigquery/docs/best-practices-performance-output,
-        /// queries return larger results will result in errors.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<QueryAssetsResponse> QueryAssetsAsync(QueryAssetsRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_QueryAssetsRequest(ref request, ref callSettings);
-            return _callQueryAssets.Async(request, callSettings);
         }
 
         /// <summary>

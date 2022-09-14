@@ -101,10 +101,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -184,10 +180,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -269,10 +261,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -352,10 +340,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -437,10 +421,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.CreateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -520,10 +500,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.CreateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -603,10 +579,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -684,10 +656,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -767,10 +735,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -848,10 +812,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -931,10 +891,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.GetProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1012,10 +968,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.GetProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1097,10 +1049,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1180,10 +1128,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1264,10 +1208,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.UpdateProduct(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -1346,10 +1286,6 @@ namespace Google.Cloud.Retail.V2.Tests
                 Variants = { new Product(), },
                 PublishTime = new wkt::Timestamp(),
                 Promotions = { new Promotion(), },
-                LocalInventories =
-                {
-                    new LocalInventory(),
-                },
             };
             mockGrpcClient.Setup(x => x.UpdateProductAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Product>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProductServiceClient client = new ProductServiceClientImpl(mockGrpcClient.Object, null, null);

@@ -120,8 +120,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// The objective configuration for model monitoring, including the information
-  /// needed to detect anomalies for one particular model.
+  /// Next ID: 8
   /// </summary>
   public sealed partial class ModelMonitoringObjectiveConfig : pb::IMessage<ModelMonitoringObjectiveConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2115,6 +2114,9 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   }
 
+  /// <summary>
+  /// Next ID: 3
+  /// </summary>
   public sealed partial class ModelMonitoringAlertConfig : pb::IMessage<ModelMonitoringAlertConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2588,6 +2590,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// The config for feature monitoring threshold.
+  /// Next ID: 3
   /// </summary>
   public sealed partial class ThresholdConfig : pb::IMessage<ThresholdConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2821,6 +2824,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Sampling Strategy for logging, can be for both training and prediction
   /// dataset.
+  /// Next ID: 2
   /// </summary>
   public sealed partial class SamplingStrategy : pb::IMessage<SamplingStrategy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

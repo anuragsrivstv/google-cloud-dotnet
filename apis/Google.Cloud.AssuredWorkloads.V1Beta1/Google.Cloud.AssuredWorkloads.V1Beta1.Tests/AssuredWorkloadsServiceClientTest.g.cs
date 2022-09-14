@@ -47,7 +47,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -77,10 +77,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -107,7 +103,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -137,10 +133,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -169,7 +161,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -199,10 +191,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -229,7 +217,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -259,16 +247,50 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
             Workload responseCallSettings = await client.UpdateWorkloadAsync(request.Workload, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Workload responseCancellationToken = await client.UpdateWorkloadAsync(request.Workload, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RestrictAllowedServicesRequestObject()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RestrictAllowedServicesRequest request = new RestrictAllowedServicesRequest
+            {
+                Name = "name1c9368b0",
+                RestrictionType = RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified,
+            };
+            RestrictAllowedServicesResponse expectedResponse = new RestrictAllowedServicesResponse { };
+            mockGrpcClient.Setup(x => x.RestrictAllowedServices(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            RestrictAllowedServicesResponse response = client.RestrictAllowedServices(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RestrictAllowedServicesRequestObjectAsync()
+        {
+            moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient> mockGrpcClient = new moq::Mock<AssuredWorkloadsService.AssuredWorkloadsServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RestrictAllowedServicesRequest request = new RestrictAllowedServicesRequest
+            {
+                Name = "name1c9368b0",
+                RestrictionType = RestrictAllowedServicesRequest.Types.RestrictionType.Unspecified,
+            };
+            RestrictAllowedServicesResponse expectedResponse = new RestrictAllowedServicesResponse { };
+            mockGrpcClient.Setup(x => x.RestrictAllowedServicesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RestrictAllowedServicesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
+            RestrictAllowedServicesResponse responseCallSettings = await client.RestrictAllowedServicesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RestrictAllowedServicesResponse responseCancellationToken = await client.RestrictAllowedServicesAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -429,7 +451,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -459,10 +481,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -488,7 +506,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -518,10 +536,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -549,7 +563,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -579,10 +593,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -608,7 +618,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -638,10 +648,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -669,7 +675,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -699,10 +705,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);
@@ -728,7 +730,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
+                ComplianceRegime = Workload.Types.ComplianceRegime.Il4,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -758,10 +760,6 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
                 EnableSovereignControls = true,
                 SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
-                CompliantButDisallowedServices =
-                {
-                    "compliant_but_disallowed_services603cb12f",
-                },
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null, null);

@@ -34,7 +34,6 @@ namespace Google.Cloud.ApigeeRegistry.V1.Snippets
             DeleteApiVersionRequest request = new DeleteApiVersionRequest
             {
                 ApiVersionName = ApiVersionName.FromProjectLocationApiVersion("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]"),
-                Force = false,
             };
             // Make the request
             registryClient.DeleteApiVersion(request);

@@ -1,4 +1,4 @@
-// Copyright 2017 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,9 +34,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Numeric, DbType.VarNumeric, true };
             yield return new object[] { SpannerDbType.Unspecified, DbType.Object, true };
             yield return new object[] { SpannerDbType.String, DbType.String, true };
-            // There is no DbType that will map automatically to SpannerDbType.Json or SpannerDbType.PgJsonb.
+            // There is no DbType that will map automatically to SpannerDbType.Json.
             yield return new object[] { SpannerDbType.Json, DbType.String, false };
-            yield return new object[] { SpannerDbType.PgJsonb, DbType.String, false };
         }
 
         [Theory]
@@ -128,7 +127,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Int64, 0 };
             yield return new object[] { SpannerDbType.Timestamp, 0 };
             yield return new object[] { SpannerDbType.Json, 0 };
-            yield return new object[] { SpannerDbType.PgJsonb, 0 };
         }
 
         [Theory]
@@ -159,7 +157,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.PgNumeric };
             yield return new object[] { SpannerDbType.Timestamp };
             yield return new object[] { SpannerDbType.Json };
-            yield return new object[] { SpannerDbType.PgJsonb };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bytes) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.String) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bool) };
@@ -170,7 +167,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.PgNumeric) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Timestamp) };
             yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Json) };
-            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.PgJsonb) };
         }
 
         [Theory]

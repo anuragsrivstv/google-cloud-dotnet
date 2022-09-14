@@ -39,7 +39,6 @@ namespace Google.Cloud.DocumentAI.V1.Snippets
                 EnableSchemaValidation = false,
                 InlineDocument = new Document(),
                 Priority = ReviewDocumentRequest.Types.Priority.Default,
-                DocumentSchema = new DocumentSchema(),
             };
             // Make the request
             Operation<ReviewDocumentResponse, ReviewDocumentOperationMetadata> response = await documentProcessorServiceClient.ReviewDocumentAsync(request);

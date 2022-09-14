@@ -342,7 +342,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// The unique identifier of this conversation profile.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// Format: `projects/{Project ID}/locations/{Location
     /// ID>/conversationProfiles/&lt;Conversation Profile ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -549,7 +549,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string securitySettings_ = "";
     /// <summary>
     /// Name of the CX SecuritySettings reference for the agent.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// Format: `projects/{Project ID}/locations/{Location
     /// ID>/securitySettings/&lt;Security Settings ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1141,7 +1141,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project to list all conversation profiles from.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
+    /// Format: `projects/{Project ID}/locations/{Location ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1642,7 +1642,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the conversation profile.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// Format: `projects/{Project ID}/locations/{Location
     /// ID>/conversationProfiles/&lt;Conversation Profile ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1840,7 +1840,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project to create a conversation profile for.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>`.
+    /// Format: `projects/{Project ID}/locations/{Location ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2340,7 +2340,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the conversation profile to delete.
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// Format: `projects/{Project ID}/locations/{Location
     /// ID>/conversationProfiles/&lt;Conversation Profile ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2539,17 +2539,17 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. ID of the Dialogflow agent environment to use.
     ///
     /// This project needs to either be the same project as the conversation or you
-    /// need to grant `service-&lt;Conversation Project
+    /// need to grant `service-{Conversation Project
     /// Number>@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow API
     /// Service Agent` role in this project.
     ///
-    /// - For ES agents, use format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// - For ES agents, use format: `projects/{Project ID}/locations/{Location
     /// ID>/agent/environments/&lt;Environment ID or '-'>`. If environment is not
     /// specified, the default `draft` environment is used. Refer to
     /// [DetectIntentRequest](/dialogflow/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.DetectIntentRequest)
     /// for more details.
     ///
-    /// - For CX agents, use format `projects/&lt;Project ID>/locations/&lt;Location
+    /// - For CX agents, use format `projects/{Project ID}/locations/{Location
     /// ID>/agents/&lt;Agent ID>/environments/&lt;Environment ID
     /// or '-'>`. If environment is not specified, the default `draft` environment
     /// is used.
@@ -4528,7 +4528,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             private readonly pbc::RepeatedField<string> knowledgeBases_ = new pbc::RepeatedField<string>();
             /// <summary>
             /// Required. Knowledge bases to query. Format:
-            /// `projects/&lt;Project ID>/locations/&lt;Location
+            /// `projects/{Project ID}/locations/{Location
             /// ID>/knowledgeBases/&lt;Knowledge Base ID>`. Currently, at most 5 knowledge
             /// bases are supported.
             /// </summary>
@@ -4717,7 +4717,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             private readonly pbc::RepeatedField<string> documents_ = new pbc::RepeatedField<string>();
             /// <summary>
             /// Required. Knowledge documents to query from. Format:
-            /// `projects/&lt;Project ID>/locations/&lt;Location
+            /// `projects/{Project ID}/locations/{Location
             /// ID>/knowledgeBases/&lt;KnowledgeBase ID>/documents/&lt;Document ID>`.
             /// Currently, at most 5 documents are supported.
             /// </summary>
@@ -4904,7 +4904,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             private string agent_ = "";
             /// <summary>
             /// Required. The name of a Dialogflow virtual agent used for end user side intent
-            /// detection and suggestion. Format: `projects/&lt;Project Number/
+            /// detection and suggestion. Format: `projects/{Project Number/
             /// ID>/locations/&lt;Location ID>/agent`. When multiple agents are allowed in
             /// the same Dialogflow project.
             /// </summary>
@@ -5386,7 +5386,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         public const int ModelFieldNumber = 1;
         private string model_ = "";
         /// <summary>
-        /// Conversation model resource name. Format: `projects/&lt;Project
+        /// Conversation model resource name. Format: `projects/{Project
         /// ID>/conversationModels/&lt;Model ID>`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6864,14 +6864,14 @@ namespace Google.Cloud.Dialogflow.V2 {
     ///
     /// For telephony integration to receive notification, make sure either this
     /// topic is in the same project as the conversation or you grant
-    /// `service-&lt;Conversation Project
+    /// `service-{Conversation Project
     /// Number>@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service
     /// Agent` role in the topic project.
     ///
     /// For chat integration to receive notification, make sure API caller has been
     /// granted the `Dialogflow Service Agent` role for the topic.
     ///
-    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>/topics/&lt;Topic ID>`.
+    /// Format: `projects/{Project ID}/locations/{Location ID}/topics/{Topic ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7560,7 +7560,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationProfile_ = "";
     /// <summary>
     /// Required. The Conversation Profile to add or update the suggestion feature
-    /// config. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// config. Format: `projects/{Project ID}/locations/{Location
     /// ID>/conversationProfiles/&lt;Conversation Profile ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7847,7 +7847,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationProfile_ = "";
     /// <summary>
     /// Required. The Conversation Profile to add or update the suggestion feature
-    /// config. Format: `projects/&lt;Project ID>/locations/&lt;Location
+    /// config. Format: `projects/{Project ID}/locations/{Location
     /// ID>/conversationProfiles/&lt;Conversation Profile ID>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8127,7 +8127,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationProfile_ = "";
     /// <summary>
     /// The resource name of the conversation profile. Format:
-    /// `projects/&lt;Project ID>/locations/&lt;Location
+    /// `projects/{Project ID}/locations/{Location
     /// ID>/conversationProfiles/&lt;Conversation Profile ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8455,7 +8455,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string conversationProfile_ = "";
     /// <summary>
     /// The resource name of the conversation profile. Format:
-    /// `projects/&lt;Project ID>/locations/&lt;Location
+    /// `projects/{Project ID}/locations/{Location
     /// ID>/conversationProfiles/&lt;Conversation Profile ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

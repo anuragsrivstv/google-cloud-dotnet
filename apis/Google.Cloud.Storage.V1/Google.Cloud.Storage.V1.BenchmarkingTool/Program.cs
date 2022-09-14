@@ -33,11 +33,9 @@ public static class Program
 
     private static void Main(string[] args)
     {
-        Configuration configuration = null;
         try
         {
-            configuration = Configuration.FromCommandLineArguments(args);
-            CreateRandomFile(configuration); // Local file is created before the start of all W1R3 benchmark runs.
+            var configuration = Configuration.FromCommandLineArguments(args);
             var logger = new PerformanceLogger(configuration.OutputFolder);
             logger.Log(s_logHeaders);
 
@@ -52,20 +50,13 @@ public static class Program
         {
             Console.WriteLine(e);
         }
-        finally
-        {
-            if (configuration != null)
-            {
-                File.Delete(configuration.LocalFile);
-            }
-        }
     }
 
     private static void RunW1R3Benchmark(Configuration configuration, StorageClient client, PerformanceLogger logger)
     {
         try
         {
-            CreateBucket(configuration, client);
+            _ = CreateBucket(configuration, client);
 
             RunWriteTest(configuration, client, logger, "Write");
             RunReadTest(configuration, client, logger, "Read[1]");
@@ -85,7 +76,7 @@ public static class Program
             Location = config.BucketLocation,
             Name = config.BucketName,
             StorageClass = config.BucketStorageClass,
-            Versioning = new Bucket.VersioningData { Enabled = config.ObjectVersioningEnabled },
+            Versioning= new Bucket.VersioningData { Enabled = config.ObjVersioningEnabled },
         };
 
         var newlyCreatedBucket = client.CreateBucket(s_projectId, bucket);
@@ -107,10 +98,6 @@ public static class Program
         SleepAfterBucketCreateDelete();
     }
 
-    /// <summary>
-    /// Creates a local file containing random data.
-    /// </summary>
-    /// <param name="configuration"> An instance of <see cref="Configuration"/> containing new file's path and size.</param>
     private static void CreateRandomFile(Configuration configuration)
     {
         var random = new Random();
@@ -128,7 +115,7 @@ public static class Program
 
     private static void RunWriteTest(Configuration configuration, StorageClient client, PerformanceLogger logger, string opName)
     {
-        string elapsedTimeUs = "-1";
+        string elapsedTimeUs = "-";
         bool success = false;
         UploadObjectOptions options = null;
         if (configuration.UploadChunkSizeInBytes != 0)
@@ -153,10 +140,11 @@ public static class Program
 
         try
         {
+            CreateRandomFile(configuration);
             Console.WriteLine("Uploading..");
             using var input = File.OpenRead(configuration.LocalFile);
             var stopwatch = Stopwatch.StartNew();
-            client.UploadObject(configuration.BucketName, configuration.ObjectName, "application/binary", input, options);
+            _ = client.UploadObject(configuration.BucketName, configuration.ObjectName, "application/binary", input, options);
             elapsedTimeUs = (stopwatch.Elapsed.Ticks / TimeSpanTicksPerMicrosecond).ToString(CultureInfo.InvariantCulture);
             success = true;
         }
@@ -169,13 +157,14 @@ public static class Program
             rowValues[8] = elapsedTimeUs;
             rowValues[9] = success ? "OK" : "FAIL";
             logger.Log(rowValues);
+            File.Delete(configuration.LocalFile);
         }
     }
 
     private static void RunReadTest(Configuration configuration, StorageClient client, PerformanceLogger logger, string opName)
     {
         var downloadFileName = $"{configuration.LocalFile}_downloaded";
-        string elapsedTimeUs = "-1";
+        string elapsedTimeUs = "-";
         bool success = false;
         DownloadObjectOptions options = null;
         if (configuration.DownloadChunkSizeInBytes != 0)
@@ -203,7 +192,7 @@ public static class Program
             Console.WriteLine("Downloading..");
             using var output = new FileStream(downloadFileName, FileMode.CreateNew);
             var stopwatch = Stopwatch.StartNew();
-            client.DownloadObject(configuration.BucketName, configuration.ObjectName, output, options);
+            _ = client.DownloadObject(configuration.BucketName, configuration.ObjectName, output, options);
             elapsedTimeUs = (stopwatch.Elapsed.Ticks / TimeSpanTicksPerMicrosecond).ToString(CultureInfo.InvariantCulture);
             success = true;
         }

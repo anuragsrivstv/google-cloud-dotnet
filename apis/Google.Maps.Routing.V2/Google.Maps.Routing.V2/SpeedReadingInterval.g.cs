@@ -25,23 +25,21 @@ namespace Google.Maps.Routing.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjNnb29nbGUvbWFwcy9yb3V0aW5nL3YyL3NwZWVkX3JlYWRpbmdfaW50ZXJ2",
-            "YWwucHJvdG8SFmdvb2dsZS5tYXBzLnJvdXRpbmcudjIirAIKFFNwZWVkUmVh",
-            "ZGluZ0ludGVydmFsEicKGnN0YXJ0X3BvbHlsaW5lX3BvaW50X2luZGV4GAEg",
-            "ASgFSACIAQESJQoYZW5kX3BvbHlsaW5lX3BvaW50X2luZGV4GAIgASgFSAGI",
-            "AQESQQoFc3BlZWQYAyABKA4yMi5nb29nbGUubWFwcy5yb3V0aW5nLnYyLlNw",
-            "ZWVkUmVhZGluZ0ludGVydmFsLlNwZWVkIkUKBVNwZWVkEhUKEVNQRUVEX1VO",
-            "U1BFQ0lGSUVEEAASCgoGTk9STUFMEAESCAoEU0xPVxACEg8KC1RSQUZGSUNf",
-            "SkFNEANCHQobX3N0YXJ0X3BvbHlsaW5lX3BvaW50X2luZGV4QhsKGV9lbmRf",
-            "cG9seWxpbmVfcG9pbnRfaW5kZXhC0QEKGmNvbS5nb29nbGUubWFwcy5yb3V0",
-            "aW5nLnYyQhlTcGVlZFJlYWRpbmdJbnRlcnZhbFByb3RvUAFaPWdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbWFwcy9yb3V0aW5nL3Yy",
-            "O3JvdXRpbmf4AQGiAgVHTVJWMqoCFkdvb2dsZS5NYXBzLlJvdXRpbmcuVjLK",
-            "AhZHb29nbGVcTWFwc1xSb3V0aW5nXFYy6gIZR29vZ2xlOjpNYXBzOjpSb3V0",
-            "aW5nOjpWMmIGcHJvdG8z"));
+            "YWwucHJvdG8SFmdvb2dsZS5tYXBzLnJvdXRpbmcudjIi5gEKFFNwZWVkUmVh",
+            "ZGluZ0ludGVydmFsEiIKGnN0YXJ0X3BvbHlsaW5lX3BvaW50X2luZGV4GAEg",
+            "ASgFEiAKGGVuZF9wb2x5bGluZV9wb2ludF9pbmRleBgCIAEoBRJBCgVzcGVl",
+            "ZBgDIAEoDjIyLmdvb2dsZS5tYXBzLnJvdXRpbmcudjIuU3BlZWRSZWFkaW5n",
+            "SW50ZXJ2YWwuU3BlZWQiRQoFU3BlZWQSFQoRU1BFRURfVU5TUEVDSUZJRUQQ",
+            "ABIKCgZOT1JNQUwQARIICgRTTE9XEAISDwoLVFJBRkZJQ19KQU0QA0LRAQoa",
+            "Y29tLmdvb2dsZS5tYXBzLnJvdXRpbmcudjJCGVNwZWVkUmVhZGluZ0ludGVy",
+            "dmFsUHJvdG9QAVo9Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9tYXBzL3JvdXRpbmcvdjI7cm91dGluZ/gBAaICBUdNUlYyqgIWR29v",
+            "Z2xlLk1hcHMuUm91dGluZy5WMsoCFkdvb2dsZVxNYXBzXFJvdXRpbmdcVjLq",
+            "AhlHb29nbGU6Ok1hcHM6OlJvdXRpbmc6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.SpeedReadingInterval), global::Google.Maps.Routing.V2.SpeedReadingInterval.Parser, new[]{ "StartPolylinePointIndex", "EndPolylinePointIndex", "Speed" }, new[]{ "StartPolylinePointIndex", "EndPolylinePointIndex" }, new[]{ typeof(global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.Routing.V2.SpeedReadingInterval), global::Google.Maps.Routing.V2.SpeedReadingInterval.Parser, new[]{ "StartPolylinePointIndex", "EndPolylinePointIndex", "Speed" }, null, new[]{ typeof(global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed) }, null, null)
           }));
     }
     #endregion
@@ -61,7 +59,6 @@ namespace Google.Maps.Routing.V2 {
   {
     private static readonly pb::MessageParser<SpeedReadingInterval> _parser = new pb::MessageParser<SpeedReadingInterval>(() => new SpeedReadingInterval());
     private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SpeedReadingInterval> Parser { get { return _parser; } }
@@ -89,7 +86,6 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeedReadingInterval(SpeedReadingInterval other) : this() {
-      _hasBits0 = other._hasBits0;
       startPolylinePointIndex_ = other.startPolylinePointIndex_;
       endPolylinePointIndex_ = other.endPolylinePointIndex_;
       speed_ = other.speed_;
@@ -107,27 +103,15 @@ namespace Google.Maps.Routing.V2 {
     private int startPolylinePointIndex_;
     /// <summary>
     /// The starting index of this interval in the polyline.
+    /// In JSON, when the index is 0, the field appears to be unpopulated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int StartPolylinePointIndex {
-      get { if ((_hasBits0 & 1) != 0) { return startPolylinePointIndex_; } else { return 0; } }
+      get { return startPolylinePointIndex_; }
       set {
-        _hasBits0 |= 1;
         startPolylinePointIndex_ = value;
       }
-    }
-    /// <summary>Gets whether the "start_polyline_point_index" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasStartPolylinePointIndex {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "start_polyline_point_index" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearStartPolylinePointIndex() {
-      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "end_polyline_point_index" field.</summary>
@@ -135,27 +119,15 @@ namespace Google.Maps.Routing.V2 {
     private int endPolylinePointIndex_;
     /// <summary>
     /// The ending index of this interval in the polyline.
+    /// In JSON, when the index is 0, the field appears to be unpopulated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int EndPolylinePointIndex {
-      get { if ((_hasBits0 & 2) != 0) { return endPolylinePointIndex_; } else { return 0; } }
+      get { return endPolylinePointIndex_; }
       set {
-        _hasBits0 |= 2;
         endPolylinePointIndex_ = value;
       }
-    }
-    /// <summary>Gets whether the "end_polyline_point_index" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasEndPolylinePointIndex {
-      get { return (_hasBits0 & 2) != 0; }
-    }
-    /// <summary>Clears the value of the "end_polyline_point_index" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearEndPolylinePointIndex() {
-      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "speed" field.</summary>
@@ -198,8 +170,8 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasStartPolylinePointIndex) hash ^= StartPolylinePointIndex.GetHashCode();
-      if (HasEndPolylinePointIndex) hash ^= EndPolylinePointIndex.GetHashCode();
+      if (StartPolylinePointIndex != 0) hash ^= StartPolylinePointIndex.GetHashCode();
+      if (EndPolylinePointIndex != 0) hash ^= EndPolylinePointIndex.GetHashCode();
       if (Speed != global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified) hash ^= Speed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -219,11 +191,11 @@ namespace Google.Maps.Routing.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasStartPolylinePointIndex) {
+      if (StartPolylinePointIndex != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(StartPolylinePointIndex);
       }
-      if (HasEndPolylinePointIndex) {
+      if (EndPolylinePointIndex != 0) {
         output.WriteRawTag(16);
         output.WriteInt32(EndPolylinePointIndex);
       }
@@ -241,11 +213,11 @@ namespace Google.Maps.Routing.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasStartPolylinePointIndex) {
+      if (StartPolylinePointIndex != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(StartPolylinePointIndex);
       }
-      if (HasEndPolylinePointIndex) {
+      if (EndPolylinePointIndex != 0) {
         output.WriteRawTag(16);
         output.WriteInt32(EndPolylinePointIndex);
       }
@@ -263,10 +235,10 @@ namespace Google.Maps.Routing.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasStartPolylinePointIndex) {
+      if (StartPolylinePointIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(StartPolylinePointIndex);
       }
-      if (HasEndPolylinePointIndex) {
+      if (EndPolylinePointIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(EndPolylinePointIndex);
       }
       if (Speed != global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified) {
@@ -284,10 +256,10 @@ namespace Google.Maps.Routing.V2 {
       if (other == null) {
         return;
       }
-      if (other.HasStartPolylinePointIndex) {
+      if (other.StartPolylinePointIndex != 0) {
         StartPolylinePointIndex = other.StartPolylinePointIndex;
       }
-      if (other.HasEndPolylinePointIndex) {
+      if (other.EndPolylinePointIndex != 0) {
         EndPolylinePointIndex = other.EndPolylinePointIndex;
       }
       if (other.Speed != global::Google.Maps.Routing.V2.SpeedReadingInterval.Types.Speed.Unspecified) {

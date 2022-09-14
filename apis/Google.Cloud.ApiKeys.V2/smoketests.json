@@ -1,9 +1,0 @@
-[
-  {
-    "method": "ListKeys",
-    "client": "ApiKeysClient",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/global"
-    }
-  }
-]
